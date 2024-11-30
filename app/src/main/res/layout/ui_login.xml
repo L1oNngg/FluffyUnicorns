@@ -39,7 +39,6 @@
         android:id="@+id/usernameInput"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your username"
         android:inputType="text"
@@ -51,12 +50,15 @@
         app:layout_constraintTop_toBottomOf="@id/usernameLabel" />
 
     <!-- Password Label -->
+
+    <!-- Plain Text Password Input -->
+
     <TextView
         android:id="@+id/passwordLabel"
         android:layout_width="125dp"
         android:layout_height="21dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
@@ -66,12 +68,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/usernameInput" />
 
-    <!-- Plain Text Password Input -->
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your password"
         android:inputType="text"
@@ -83,40 +83,24 @@
         app:layout_constraintTop_toBottomOf="@id/passwordLabel" />
 
     <!-- Optional Remember Me Section with RadioButton -->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="200dp"
+
+    <CheckBox
+        android:id="@+id/remember_me"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        android:buttonTint="@color/purple_500"
         android:gravity="left|center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordInput">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:buttonTint="@color/purple_500" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:layout_marginStart="5dp"
-            android:gravity="left|center_vertical"
-            android:includeFontPadding="false"
-            android:maxLines="1"
-            android:text="Remember me"
-            android:textColor="#FFAFAFAF"
-            android:textSize="14sp" />
-    </LinearLayout>
+        android:includeFontPadding="false"
+        android:text="Remember me"
+        android:textColor="#FFAFAFAF"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="403dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
         android:background="@drawable/loginbtn_background"
         android:gravity="center"
         android:includeFontPadding="false"
@@ -125,21 +109,23 @@
         android:text="Login"
         android:textColor="#FFF1F1F1"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="460dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:text="Forgot your password?"
         android:textColor="#FFAFAFAF"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:layout_editor_absoluteX="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageView
         android:id="@+id/imageView"
