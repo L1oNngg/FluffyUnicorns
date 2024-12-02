@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@drawable/main_background"
     tools:layout_editor_absoluteY="24dp">
 
     <ImageView
@@ -24,6 +24,7 @@
         android:id="@+id/usernameLabel"
         android:layout_width="125dp"
         android:layout_height="21dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -31,8 +32,8 @@
         android:text="Username *"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/logoImage"
-        tools:layout_editor_absoluteX="28dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
     <!-- Plain Text Username Input -->
     <EditText
@@ -57,7 +58,7 @@
         android:id="@+id/passwordLabel"
         android:layout_width="125dp"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -88,19 +89,23 @@
         android:id="@+id/remember_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:buttonTint="@color/purple_500"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="226dp"
+        android:buttonTint="@color/_600"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:text="Remember me"
         android:textColor="#FFAFAFAF"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="403dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/loginbtn_background"
         android:gravity="center"
         android:includeFontPadding="false"
@@ -111,7 +116,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="460dp" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -135,8 +140,9 @@
         android:layout_marginTop="81dp"
         android:scaleType="centerInside"
         android:src="@drawable/line_1"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -147,7 +153,8 @@
         android:text="Don't have an account? Register"
         android:textColor="#FFAFAFAF"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="106dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

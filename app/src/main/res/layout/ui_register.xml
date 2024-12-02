@@ -65,7 +65,7 @@
 
     <EditText
         android:id="@+id/firstname"
-        android:layout_width="170dpdp"
+        android:layout_width="170dp"
         android:layout_height="45dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your first name"
@@ -220,7 +220,8 @@
         android:text="Register"
         android:textColor="#FFF1F1F1"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="666dp" />
 
     <TextView
