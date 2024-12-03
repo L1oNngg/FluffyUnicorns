@@ -105,7 +105,7 @@
         android:id="@+id/button"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/loginbtn_background"
         android:gravity="center"
         android:includeFontPadding="false"
