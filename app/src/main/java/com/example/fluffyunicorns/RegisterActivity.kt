@@ -9,16 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class LoginActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.ui_login)
+        setContentView(R.layout.ui_register)
 
-        val tvRegister: TextView = findViewById(R.id.tvRegister)
+        val sign_in_link: TextView = findViewById(R.id.sign_in_link)
 
-        tvRegister.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+        sign_in_link.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }

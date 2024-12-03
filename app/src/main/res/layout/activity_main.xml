@@ -29,6 +29,7 @@
         android:layout_height="53dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/registerbtn_background"
+        android:backgroundTint="@color/essential_bright"
         android:gravity="center"
         android:includeFontPadding="false"
         android:paddingLeft="59dp"
