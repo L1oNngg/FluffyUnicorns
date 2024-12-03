@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@drawable/main_background"
     tools:layout_editor_absoluteY="24dp">
 
     <ImageView
@@ -20,25 +20,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Username Label -->
-
-    <!-- Plain Text Username Input -->
-
     <TextView
         android:id="@+id/usernameLabel"
         android:layout_width="125dp"
         android:layout_height="21dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:text="Username *"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
+    <!-- Plain Text Username Input -->
     <EditText
         android:id="@+id/usernameInput"
         android:layout_width="350dp"
@@ -61,15 +58,14 @@
         android:id="@+id/passwordLabel"
         android:layout_width="125dp"
         android:layout_height="21dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:text="Password *"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/usernameInput" />
 
@@ -93,17 +89,17 @@
         android:id="@+id/remember_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="226dp"
         android:buttonTint="@color/_600"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:text="Remember me"
         android:textColor="#FFAFAFAF"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <Button
         android:id="@+id/button"
@@ -119,7 +115,6 @@
         android:textColor="#FFF1F1F1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
