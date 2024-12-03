@@ -21,14 +21,15 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="300dp"
         android:layout_height="53dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/registerbtn_background"
+        android:backgroundTint="@color/essential_bright"
         android:gravity="center"
         android:includeFontPadding="false"
         android:paddingLeft="59dp"
@@ -38,15 +39,15 @@
         android:text="Register"
         android:textColor="#FF000000"
         android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="594dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/loginbtn_background"
         android:gravity="center"
         android:includeFontPadding="false"
@@ -57,9 +58,10 @@
         android:text="Login"
         android:textColor="#F1F1F1"
         android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mainImage" />
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/logoImage"
@@ -77,16 +79,16 @@
         android:layout_width="279.76dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:includeFontPadding="false"
         android:maxLines="2"
         android:text="Register now and take a first step towards your next adventure."
         android:textColor="#FFFFFFFF"
         android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.427"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
