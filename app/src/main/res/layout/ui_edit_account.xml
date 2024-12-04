@@ -36,7 +36,7 @@
         android:maxLines="1"
         android:scaleType="centerInside"
         android:singleLine="true"
-        android:src="@drawable/lorem_account"
+        android:src="@drawable/lorem_edit_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,43 +64,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerBackground">
 
-
-        <ImageView
-            android:id="@+id/statusIndicator"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+        <!-- White Circle -->
+        <FrameLayout
+            android:id="@+id/statusIndicatorWrapper"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_gravity="bottom|end"
             android:layout_margin="4dp"
-            android:background="@drawable/green_circle" />
+            android:background="@drawable/white_circle">
+
+            <!-- Camera Icon -->
+            <ImageView
+                android:id="@+id/statusIndicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_camera" />
+        </FrameLayout>
     </FrameLayout>
 
+
     <!-- Edit Profile Button -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/surface_primary"
-        android:gravity="center"
-        android:text="Edit Profile"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePictureContainer" />
 
 
     <!-- First Name -->
-
-    <TextView
+    <EditText
         android:id="@+id/Firstname"
         android:layout_width="170dp"
         android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
+        android:hint="Hoang"
         android:padding="10dp"
-        android:text="Hoang"
         android:textColor="@color/text_black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -111,54 +106,51 @@
         android:id="@+id/tvFirstnameLabel"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
         android:text="Firstname"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/Firstname"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
+        app:layout_constraintTop_toBottomOf="@+id/profilePictureContainer" />
 
     <!-- Last Name -->
     <TextView
         android:id="@+id/tvLastnameLabel"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
         android:text="Lastname"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/Lastname"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/profilePictureContainer" />
 
-
-    <!-- Email -->
-
-    <TextView
+    <EditText
         android:id="@+id/Lastname"
         android:layout_width="170dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
+        android:hint="Anh"
         android:padding="10dp"
-        android:text="Anh"
         android:textStyle="bold"
         android:textColor="@color/text_black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/Firstname"
         app:layout_constraintTop_toBottomOf="@+id/tvLastnameLabel" />
 
+    <!-- Email -->
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
@@ -172,14 +164,14 @@
         app:layout_constraintTop_toBottomOf="@+id/Firstname"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/frame_box"
+        android:hint="sayhoang@gmail.com"
         android:padding="10dp"
-        android:text="sayhoang@gmail.com"
         android:textColor="@color/text_black"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -200,38 +192,81 @@
         app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/phone"
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/frame_box"
+        android:hint="(480) 555-0103"
         android:padding="10dp"
-        android:text="(480) 555-0103"
         android:textColor="@color/text_black"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Change Password"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/phone"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame_box"
+        android:hint="●●●●●●●●"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#FF343434"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/show_password_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="310dp"
+        android:background="@null"
+        android:contentDescription="Show/Hide password"
+        android:src="@drawable/hidden_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password" />
+
     <!-- Back Button -->
     <Button
         android:id="@+id/btnBack"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/registerbtn_background"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/loginbtn_background"
         android:gravity="center"
         android:paddingLeft="59dp"
         android:paddingTop="5dp"
         android:paddingRight="59dp"
         android:paddingBottom="5dp"
-        android:text="Back"
+        android:text="Save"
         android:textAllCaps="false"
-        android:textColor="@color/text_black"
+        android:textColor="@color/text_white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,18 +9,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class AddPaymentMethodActivity : AppCompatActivity() {
+class UserAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.ui_add_payment_method)
+        setContentView(R.layout.ui_account)
 
-        val SaveBtn: Button = findViewById(R.id.SaveBtn)
+        val button: Button = findViewById(R.id.button)
 
-        SaveBtn.setOnClickListener {
-            val intent = Intent(this, UserAccountActivity::class.java)
+        button.setOnClickListener {
+            val intent = Intent(this, EditUserAccountActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
