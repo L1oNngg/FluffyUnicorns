@@ -158,10 +158,6 @@
         app:layout_constraintStart_toStartOf="@+id/password"
         tools:ignore="MissingConstraints" />
 
-    <!-- Register Button -->
-
-    <!-- Sign In Link -->
-
     <EditText
         android:id="@+id/password"
         android:layout_width="350dp"

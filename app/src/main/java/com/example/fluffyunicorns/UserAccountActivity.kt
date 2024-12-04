@@ -15,11 +15,11 @@ class UserAccountActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.ui_account)
 
-//        val sign_in_link: TextView = findViewById(R.id.sign_in_link)
-//
-//        sign_in_link.setOnClickListener {
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
-//        }
+        val button: Button = findViewById(R.id.button)
+
+        button.setOnClickListener {
+            val intent = Intent(this, EditUserAccountActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

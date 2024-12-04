@@ -42,6 +42,7 @@
     <color name="surface_primary">@color/primary</color>
     <color name="surface_bright">@color/essential_bright</color>
     <color name="surface_dark">@color/essential_dark</color>
+    <color name="surface_white">@color/b_0</color>
     <!--border-->
     <color name="border_white">@color/b_0</color>
     <color name="border_grey">@color/b_50</color>
