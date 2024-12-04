@@ -21,13 +21,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Last Name -->
-
-    <!-- First Name -->
-
-    <!-- Email -->
-
-    <!-- Phone -->
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/myBarrier"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/textView13"
@@ -47,14 +46,12 @@
         android:layout_width="170dp"
         android:layout_height="45dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="-20dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your last name"
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/firstname"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/logoImage"
         tools:ignore="MissingConstraints" />
 
@@ -79,15 +76,14 @@
         android:id="@+id/firstname"
         android:layout_width="170dp"
         android:layout_height="45dp"
-        android:layout_marginStart="175dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your first name"
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lastname"
         app:layout_constraintTop_toBottomOf="@+id/logoImage"
         tools:ignore="MissingConstraints" />
 
@@ -95,14 +91,13 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
         android:layout_marginBottom="8dp"
         android:text="Email *"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/email"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -116,8 +111,7 @@
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/lastname"
         tools:ignore="MissingConstraints" />
 
@@ -125,15 +119,16 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginBottom="8dp"
         android:text="Phone *"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/phone"
         tools:ignore="MissingConstraints" />
+
+    <!-- Remember Me -->
 
     <EditText
         android:id="@+id/phone"
@@ -146,26 +141,26 @@
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="MissingConstraints" />
-
-    <!-- Remember Me -->
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginBottom="8dp"
         android:text="Password *"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/password"
         tools:ignore="MissingConstraints" />
+
+    <!-- Register Button -->
+
+    <!-- Sign In Link -->
 
     <EditText
         android:id="@+id/password"
@@ -178,14 +173,9 @@
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/phone"
         tools:ignore="MissingConstraints" />
-
-    <!-- Register Button -->
-
-    <!-- Sign In Link -->
 
     <ImageButton
         android:id="@+id/show_password_button_1"
@@ -206,14 +196,13 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginBottom="8dp"
         android:text="Confirm Password *"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/confirm_password"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/confirm_password"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -227,8 +216,7 @@
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/password"
         tools:ignore="MissingConstraints" />
 
@@ -279,7 +267,6 @@
         android:id="@+id/remember_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="32dp"
         android:buttonTint="@color/border_grey"
@@ -287,7 +274,8 @@
         android:textColor="@color/text_grey"
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/register_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/confirm_password" />
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
+        app:layout_constraintTop_toTopOf="@+id/confirm_password"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

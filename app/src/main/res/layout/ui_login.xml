@@ -20,24 +20,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/myBarrier"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="LoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <!-- Username Label -->
+
+    <!-- Plain Text Username Input -->
+
     <TextView
         android:id="@+id/usernameLabel"
-        android:layout_width="125dp"
+        android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="48dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
-        android:text="Username *"
+        android:text="Username/Email *"
         android:textColor="@color/text_black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/usernameInput"
         app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
-    <!-- Plain Text Username Input -->
     <EditText
         android:id="@+id/usernameInput"
         android:layout_width="350dp"
@@ -48,20 +56,20 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@id/usernameLabel" />
 
     <!-- Password Label -->
 
     <!-- Plain Text Password Input -->
 
+    <!-- Optional Remember Me Section with RadioButton -->
+
     <TextView
         android:id="@+id/passwordLabel"
         android:layout_width="125dp"
         android:layout_height="21dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
@@ -69,39 +77,35 @@
         android:textColor="@color/text_black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/passwordInput"
         app:layout_constraintTop_toBottomOf="@id/usernameInput" />
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your password"
         android:inputType="text"
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@id/passwordLabel" />
-
-    <!-- Optional Remember Me Section with RadioButton -->
 
     <CheckBox
         android:id="@+id/remember_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="226dp"
         android:buttonTint="@color/border_grey"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:text="Remember me"
         android:textColor="@color/text_grey"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <Button

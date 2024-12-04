@@ -7,24 +7,15 @@
     android:layout_height="851dp"
     android:background="@drawable/main_background">
 
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/myBarrier"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
-        android:gravity="left|center_vertical"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:text="Name on Card *"
-        android:textColor="#FF1A1A1A"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="SaveBtn" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/etName"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
@@ -34,8 +25,7 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
     <ImageView
@@ -53,11 +43,10 @@
         android:id="@+id/imageView5"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="44dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_left_arrow"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -72,14 +61,13 @@
         android:src="@drawable/lorem_add_payment_method"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -89,7 +77,7 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etName"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
@@ -103,15 +91,13 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvCard" />
 
     <TextView
         android:id="@+id/tvCard"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -121,8 +107,8 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintStart_toStartOf="@id/etCard"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -133,13 +119,12 @@
         android:scaleType="centerInside"
         android:src="@drawable/visa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <EditText
         android:id="@+id/etExpire"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
         android:hint="MM/YY"
@@ -147,14 +132,13 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvExpire" />
 
     <TextView
         android:id="@+id/tvExpire"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -164,7 +148,7 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etExpire"
         app:layout_constraintTop_toBottomOf="@+id/etCard" />
 
     <TextView
@@ -172,7 +156,6 @@
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="85dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
@@ -180,25 +163,22 @@
         android:text="Security Code *"
         android:textColor="@color/text_black"
         android:textStyle="bold"
-
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etSecurity"
         app:layout_constraintTop_toBottomOf="@+id/etCard" />
 
     <EditText
         android:id="@+id/etSecurity"
         android:layout_width="160dp"
         android:layout_height="50dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
         android:background="@drawable/frame_box"
         android:inputType="text"
         android:padding="10dp"
-        android:textColor="#FF000000"
 
+        android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toEndOf="@+id/etExpire"
         app:layout_constraintTop_toBottomOf="@+id/tvSecurity" />
 
@@ -213,15 +193,13 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvPC" />
 
     <TextView
         android:id="@+id/tvPC"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -231,7 +209,7 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etPC"
         app:layout_constraintTop_toBottomOf="@+id/etExpire" />
 
     <EditText
@@ -245,15 +223,13 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
 
     <TextView
         android:id="@+id/tvCountry"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -263,14 +239,13 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etCountry"
         app:layout_constraintTop_toBottomOf="@+id/etPC" />
 
     <TextView
         android:id="@+id/tvDefault"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -280,7 +255,7 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/etCountry" />
 
     <ImageView
@@ -308,7 +283,6 @@
         android:id="@+id/SaveBtn"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/loginbtn_background"
         android:gravity="center"
@@ -319,6 +293,7 @@
         android:textAllCaps="false"
         android:textColor="#FFF1F1F1"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCountry" />
 
