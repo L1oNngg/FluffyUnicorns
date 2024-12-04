@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="_0">#FFFFFF</color>
-    <color name="_50">#F1F1F1</color>
-    <color name="_200">#D3D3D3</color>
-    <color name="_400">#AFAFAF</color>
-    <color name="_600">#7C7C7C</color>
-    <color name="_800">#343434</color>
-    <color name="_900">#202020</color>
-    <color name="primary">#C58F23</color>
+    <!--Colors-->
+    <!--Chelsea Gem-->
+    <color name="c_50">#FEFBE8</color>
+    <color name="c_100">#FEF5C3</color>
+    <color name="c_200">#FDE88B</color>
+    <color name="c_300">#FCD448</color>
+    <color name="c_400">#F8BD17</color>
+    <color name="c_500">#E8A50A</color>
+    <color name="c_600">#C87D06</color>
+    <color name="c_700">#9B5608</color>
+    <color name="c_800">#84460F</color>
+    <color name="c_900">#703913</color>
+    <color name="c_950">#421C06</color>
+
+    <!--Primitives-->
+    <!--brand-->
+    <color name="primary">#9B5608</color>
+    <color name="secondary">#FFFFFF</color>
     <color name="essential_bright">#D7CFCC</color>
     <color name="essential_dark">#231F20</color>
+    <!--blue-->
+    <color name="b_0">#FFFFFF</color>
+    <color name="b_50">#BCBDBC</color>
+    <color name="b_200">#5095E4</color>
+    <color name="b_400">#2D6ADC</color>
+    <color name="b_600">#013C96</color>
+    <color name="b_800">#053E93</color>
+    <color name="b_900">#1A1A1A</color>
+    <!--others-->
+    <color name="green">#38803D</color>
+    <color name="red">#C94351</color>
+
+    <!--Token-->
+    <!--text-->
+    <color name="text_black">@color/b_900</color>
+    <color name="text_grey">@color/b_50</color>
+    <color name="text_white">@color/b_0</color>
+    <color name="text_brand">@color/b_400</color>
+    <!--surface-->
+    <color name="surface_primary">@color/primary</color>
+    <color name="surface_bright">@color/essential_bright</color>
+    <color name="surface_dark">@color/essential_dark</color>
+    <!--border-->
+    <color name="border_white">@color/b_0</color>
+    <color name="border_grey">@color/b_50</color>
+    <color name="border_blue">@color/b_400</color>
 </resources>
