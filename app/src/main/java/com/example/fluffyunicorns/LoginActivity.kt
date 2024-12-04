@@ -6,8 +6,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +24,13 @@ class LoginActivity : AppCompatActivity() {
 
         LoginBtn.setOnClickListener {
             val intent = Intent(this, AddPaymentMethodActivity::class.java)
+            startActivity(intent)
+        }
+
+        val tvForget: TextView = findViewById(R.id.tvForget)
+
+        tvForget.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
     }

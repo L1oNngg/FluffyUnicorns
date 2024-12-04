@@ -31,8 +31,9 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:text="Username *"
-        android:textColor="#FF000000"
+        android:textColor="@color/text_black"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
@@ -65,8 +66,9 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:text="Password *"
-        android:textColor="#FF000000"
+        android:textColor="@color/text_black"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/usernameInput" />
 
@@ -92,11 +94,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="226dp"
-        android:buttonTint="@color/c_600"
+        android:buttonTint="@color/border_grey"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:text="Remember me"
-        android:textColor="#FFAFAFAF"
+        android:textColor="@color/text_grey"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,6 +115,7 @@
         android:maxLines="1"
         android:padding="5dp"
         android:text="Login"
+        android:textAllCaps="false"
         android:textColor="#FFF1F1F1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,6 +123,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <TextView
+        android:id="@+id/tvForget"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginTop="10dp"
