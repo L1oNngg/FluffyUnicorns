@@ -86,7 +86,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Name on Card *"
-        android:textColor="#FF1A1A1A"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -117,7 +118,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Card Number *"
-        android:textColor="#FF1A1A1A"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
@@ -159,7 +161,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Expiration *"
-        android:textColor="#FF1A1A1A"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCard" />
@@ -175,8 +178,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Security Code *"
-        android:textColor="#FF1A1A1A"
-
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCard" />
@@ -224,7 +227,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Post Code *"
-        android:textColor="#FF1A1A1A"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etExpire" />
@@ -255,7 +259,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Country *"
-        android:textColor="#FF1A1A1A"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPC" />
@@ -271,7 +276,8 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="Save as default"
-        android:textColor="#FF1A1A1A"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCountry" />
