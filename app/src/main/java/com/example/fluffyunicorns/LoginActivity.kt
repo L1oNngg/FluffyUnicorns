@@ -21,5 +21,12 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+
+        val LoginBtn: Button = findViewById(R.id.LoginBtn)
+
+        LoginBtn.setOnClickListener {
+            val intent = Intent(this, AddPaymentMethodActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
