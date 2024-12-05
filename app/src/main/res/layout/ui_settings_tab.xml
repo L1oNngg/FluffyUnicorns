@@ -52,7 +52,7 @@
         android:background="@drawable/avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/headerBackground"/>
+        app:layout_constraintTop_toBottomOf="@id/headerBackground" />
 
     <FrameLayout
         android:id="@+id/about"
@@ -115,56 +115,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <FrameLayout
-        android:id="@+id/editaccount"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/frame_box"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about">
-
-        <!-- ImageView -->
-
-        <ImageView
-            android:id="@+id/editaccountIcon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="left|center_vertical"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_edit" />
-
-        <!-- TextView -->
-        <TextView
-            android:id="@+id/edittext"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginStart="34dp"
-            android:gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:text="Edit Account"
-            android:textColor="#FF1A1A1A"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/editaccountarrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="right|center_vertical"
-            android:background="@null"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_right_arrow" />
-
-    </FrameLayout>
-
-    <FrameLayout
         android:id="@+id/pc"
         android:layout_width="350dp"
         android:layout_height="45dp"
@@ -173,9 +123,8 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editaccount">
+        app:layout_constraintTop_toBottomOf="@+id/about">
 
         <!-- ImageView -->
 
@@ -223,7 +172,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pc">
 
