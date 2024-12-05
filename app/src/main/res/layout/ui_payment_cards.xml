@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:layout_editor_absoluteX="7dp"
+    tools:layout_editor_absoluteY="103dp">
+
+    <!-- Top Header -->
+    <ImageView
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="top|left"
+        android:background="@color/essential_bright"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="314.2dp"
+        android:layout_height="33.92dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:scaleType="centerInside"
+        android:singleLine="true"
+        android:src="@drawable/lorem_payment_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/backIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@color/essential_bright"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackground"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/headerBackground" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="350dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBackground">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/VisaIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/visa" />
+
+        <!-- TextView -->
+
+        <TextView
+            android:id="@+id/SettingText"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="40dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="5156 32** **** 6598"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/SettingButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_down_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/visa2"
+        android:layout_width="350dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/VisaIcon2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/visa" />
+
+        <!-- TextView -->
+
+        <TextView
+            android:id="@+id/SettingText2"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="40dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="5156 32** **** 6108"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/SettingButton2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_down_arrow" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="77dp"
+        android:background="@drawable/dashed_holder_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/visa2">
+
+        <!-- Inner FrameLayout -->
+        <FrameLayout
+            android:layout_width="231dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="13dp">
+
+            <!-- Left Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="207dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_plus" />
+
+            <!-- Text Inside LinearLayout -->
+            <LinearLayout
+                android:layout_width="202dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="29dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Add Payment Method"
+                    android:textColor="#FFBCBDBC"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

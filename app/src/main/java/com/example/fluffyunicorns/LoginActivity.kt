@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         val LoginBtn: Button = findViewById(R.id.LoginBtn)
 
         LoginBtn.setOnClickListener {
-            val intent = Intent(this, AddPaymentMethodActivity::class.java)
+            val intent = Intent(this, SettingsTabActivity::class.java)
             startActivity(intent)
         }
 
