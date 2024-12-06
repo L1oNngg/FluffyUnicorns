@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
             android:scaleType="centerInside"
-            android:src="@drawable/visa" />
+            android:src="@drawable/logo_master_card" />
 
         <!-- TextView -->
 
