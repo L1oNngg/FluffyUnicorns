@@ -26,7 +26,7 @@ class SettingsTabActivity : AppCompatActivity() {
         val pc: FrameLayout = findViewById(R.id.pc)
 
         pc.setOnClickListener {
-            val intent = Intent(this, AddPaymentMethodActivity::class.java)
+            val intent = Intent(this, PaymentCardsActivity::class.java)
             startActivity(intent)
         }
 

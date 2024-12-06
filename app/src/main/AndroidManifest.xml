@@ -28,6 +28,7 @@
         <activity android:name=".UserAccountActivity" />
         <activity android:name=".EditUserAccountActivity" />
         <activity android:name=".SettingsTabActivity" />
+        <activity android:name=".PaymentCardsActivity" />
     </application>
 
 </manifest>
