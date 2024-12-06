@@ -90,7 +90,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
         android:hint="Enter your password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:fontFamily="@font/montserrat_regular"
         android:padding="10dp"
         android:textColor="#FF000000"
