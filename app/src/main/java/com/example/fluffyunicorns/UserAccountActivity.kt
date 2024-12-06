@@ -29,5 +29,13 @@ class UserAccountActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsTabActivity::class.java)
             startActivity(intent)
         }
+
+        val btnBack: Button = findViewById(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, SettingsTabActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
+

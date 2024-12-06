@@ -27,16 +27,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <TextView
         android:layout_width="314.2dp"
         android:layout_height="33.92dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:scaleType="centerInside"
         android:singleLine="true"
-        android:src="@drawable/lorem_account"
+        android:text="Account"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,6 +82,7 @@
         android:id="@+id/button"
         android:layout_width="100dp"
         android:layout_height="28dp"
+        android:fontFamily="@font/montserrat_semibold"
         android:layout_marginTop="16dp"
         android:background="@color/surface_primary"
         android:gravity="center"
@@ -99,6 +103,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
+        android:fontFamily="@font/montserrat_bold"
         android:padding="10dp"
         android:text="Hoang"
         android:textColor="@color/text_black"
@@ -111,6 +116,7 @@
         android:id="@+id/tvFirstnameLabel"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
@@ -130,6 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="left|center_vertical"
         android:includeFontPadding="false"
         android:maxLines="1"
@@ -150,6 +157,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat_bold"
         android:background="@drawable/frame_box"
         android:padding="10dp"
         android:text="Anh"
@@ -165,6 +173,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Email"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
@@ -179,6 +188,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/frame_box"
         android:padding="10dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="sayhoang@gmail.com"
         android:textColor="@color/text_black"
         android:textSize="16dp"
@@ -196,6 +206,7 @@
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintStart_toStartOf="@id/phone"
         app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="MissingConstraints" />
@@ -208,6 +219,7 @@
         android:background="@drawable/frame_box"
         android:padding="10dp"
         android:text="(480) 555-0103"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/text_black"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -230,8 +242,11 @@
         android:textAllCaps="false"
         android:textColor="@color/text_black"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

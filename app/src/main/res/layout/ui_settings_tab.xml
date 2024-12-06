@@ -9,6 +9,26 @@
     tools:layout_editor_absoluteY="103dp">
 
     <!-- Top Header -->
+
+    <TextView
+        android:id="@+id/forgotPasswordHint"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineHeight="16dp"
+        android:text="Your privacy and security are our top priority. All\nyour data is encrypted and safely stored"
+        android:textAlignment="center"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lo" />
+
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/myBarrier"
         android:layout_width="wrap_content"
@@ -26,16 +46,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <TextView
         android:layout_width="314.2dp"
         android:layout_height="33.92dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:scaleType="centerInside"
         android:singleLine="true"
-        android:src="@drawable/lorem_settings"
+        android:text="Settings"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +104,7 @@
             android:id="@+id/SettingText"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:layout_gravity="left|center_vertical"
             android:layout_marginStart="34dp"
             android:gravity="center_vertical"
@@ -178,6 +202,7 @@
             android:layout_marginStart="34dp"
             android:gravity="center_vertical"
             android:includeFontPadding="false"
+            android:fontFamily="@font/montserrat_semibold"
             android:maxLines="1"
             android:singleLine="true"
             android:text="Payment Cards"
@@ -229,6 +254,7 @@
             android:gravity="center_vertical"
             android:includeFontPadding="false"
             android:maxLines="1"
+            android:fontFamily="@font/montserrat_semibold"
             android:singleLine="true"
             android:text="Logout"
             android:textColor="#FF1A1A1A"

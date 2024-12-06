@@ -37,6 +37,7 @@
         android:paddingRight="59dp"
         android:paddingBottom="5dp"
         android:text="Register"
+        android:textStyle="bold"
         android:textAllCaps="false"
         android:textColor="@color/text_black"
         android:textSize="20dp"
@@ -60,6 +61,7 @@
         android:textAllCaps="false"
         android:textColor="@color/text_white"
         android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -78,6 +80,7 @@
 
     <TextView
         android:id="@+id/registerText"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_width="279.76dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"

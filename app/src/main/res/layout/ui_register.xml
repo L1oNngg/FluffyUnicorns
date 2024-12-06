@@ -31,6 +31,7 @@
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Lastname *"
@@ -45,11 +46,12 @@
         android:id="@+id/lastname"
         android:layout_width="170dp"
         android:layout_height="45dp"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_marginTop="60dp"
         android:background="@drawable/frame_box"
-        android:hint="Enter your last name"
+        android:hint="Nguyen"
         android:padding="10dp"
-        android:textColor="#FF343434"
+        android:textColor="@color/text_grey"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/logoImage"
@@ -61,6 +63,7 @@
 
     <TextView
         android:id="@+id/textView14"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -79,7 +82,9 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/frame_box"
-        android:hint="Enter your first name"
+        android:fontFamily="@font/montserrat_regular"
+
+        android:hint="Van A"
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
@@ -90,6 +95,7 @@
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Email *"
@@ -106,7 +112,9 @@
         android:layout_height="45dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/frame_box"
-        android:hint="Enter your email"
+        android:hint="example@gmail.com"
+        android:fontFamily="@font/montserrat_regular"
+
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="#FF343434"
@@ -118,6 +126,8 @@
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Phone *"
@@ -136,7 +146,9 @@
         android:layout_height="45dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/frame_box"
-        android:hint="Enter your phone number"
+        android:hint="(+84) XXXX XXX XXX"
+        android:fontFamily="@font/montserrat_regular"
+
         android:inputType="phone"
         android:padding="10dp"
         android:textColor="#FF343434"
@@ -152,6 +164,8 @@
         android:layout_marginBottom="8dp"
         android:text="Password *"
         android:textColor="@color/text_black"
+        android:fontFamily="@font/montserrat_bold"
+
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/password"
@@ -164,8 +178,9 @@
         android:layout_height="45dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/frame_box"
-        android:hint="Enter your password"
         android:inputType="textPassword"
+        android:fontFamily="@font/montserrat_regular"
+
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16sp"
@@ -197,6 +212,8 @@
         android:textColor="@color/text_black"
         android:textSize="16dp"
         android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+
         app:layout_constraintBottom_toTopOf="@+id/confirm_password"
         app:layout_constraintStart_toStartOf="@+id/confirm_password"
         tools:ignore="MissingConstraints" />
@@ -207,11 +224,12 @@
         android:layout_height="45dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/frame_box"
-        android:hint="Confirm your password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="#FF343434"
         android:textSize="16dp"
+        android:fontFamily="@font/montserrat_regular"
+
         app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/password"
         tools:ignore="MissingConstraints" />
@@ -242,6 +260,7 @@
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="@color/text_white"
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -254,6 +273,8 @@
         android:layout_marginTop="8dp"
         android:text="Already have an account? Sign in"
         android:textColor="#FFAFAFAF"
+        android:fontFamily="@font/montserrat_regular"
+
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -269,6 +290,8 @@
         android:text="Remember me"
         android:textColor="@color/text_grey"
         android:textSize="14dp"
+        android:fontFamily="@font/montserrat_regular"
+
         app:layout_constraintBottom_toTopOf="@+id/register_button"
         app:layout_constraintStart_toStartOf="@+id/myBarrier"
         app:layout_constraintTop_toTopOf="@+id/confirm_password"
