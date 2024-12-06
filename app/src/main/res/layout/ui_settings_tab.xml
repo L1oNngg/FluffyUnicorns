@@ -109,10 +109,43 @@
         android:layout_height="80dp"
         android:background="@color/essential_bright"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_footer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <!-- Icons -->
+
+    <ImageView
+        android:id="@+id/iconHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_default"
+        app:layout_constraintBottom_toBottomOf="@id/footerBackground"
+        app:layout_constraintEnd_toStartOf="@+id/iconHistory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/footerBackground" />
+
+    <ImageView
+        android:id="@+id/iconHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_history_default"
+        app:layout_constraintBottom_toBottomOf="@id/footerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/footerBackground" />
+
+    <ImageView
+        android:id="@+id/iconSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_setting_outline"
+        app:layout_constraintBottom_toBottomOf="@id/footerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iconHistory"
+        app:layout_constraintTop_toTopOf="@id/footerBackground" />
 
     <FrameLayout
         android:id="@+id/pc"

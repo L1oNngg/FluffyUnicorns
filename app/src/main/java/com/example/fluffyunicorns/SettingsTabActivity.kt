@@ -23,13 +23,6 @@ class SettingsTabActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val editaccount: FrameLayout = findViewById(R.id.editaccount)
-
-        editaccount.setOnClickListener {
-            val intent = Intent(this, EditUserAccountActivity::class.java)
-            startActivity(intent)
-        }
-
         val pc: FrameLayout = findViewById(R.id.pc)
 
         pc.setOnClickListener {
