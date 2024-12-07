@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:layout_editor_absoluteX="7dp"
+    tools:layout_editor_absoluteY="103dp">
+
+    <ImageView
+        android:id="@+id/headerBackground2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="top|left"
+        android:background="@color/essential_bright"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="314.2dp"
+        android:layout_height="33.92dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:scaleType="centerInside"
+        android:singleLine="true"
+        android:text="Payment Cards"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/myBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="frameAdd" />
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="44dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="350dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameAdd">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/VisaIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/visa" />
+
+        <!-- TextView -->
+
+        <TextView
+            android:id="@+id/SettingText"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="5156 32** **** 6598"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/SettingButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_trash" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/visa2"
+        android:layout_width="350dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/VisaIcon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_master_card" />
+
+        <!-- TextView -->
+
+        <TextView
+            android:id="@+id/SettingText2"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="6985 92** **** 9845"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/SettingButton2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_trash" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameAdd"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/dashed_holder_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBackground2">
+
+        <!-- Inner FrameLayout -->
+        <FrameLayout
+            android:layout_width="231dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="13dp">
+
+            <!-- Left Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="207dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_plus" />
+
+            <!-- Text Inside LinearLayout -->
+            <LinearLayout
+                android:layout_width="202dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="29dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Add Payment Method"
+                    android:textColor="#FFBCBDBC"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

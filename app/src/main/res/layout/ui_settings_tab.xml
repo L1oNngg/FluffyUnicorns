@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:layout_editor_absoluteX="7dp"
+    tools:layout_editor_absoluteY="103dp">
+
+    <!-- Top Header -->
+
+    <TextView
+        android:id="@+id/forgotPasswordHint"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineHeight="16dp"
+        android:text="Your privacy and security are our top priority. All\nyour data is encrypted and safely stored"
+        android:textAlignment="center"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lo" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/myBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start" />
+
+    <ImageView
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="top|left"
+        android:background="@color/essential_bright"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="314.2dp"
+        android:layout_height="33.92dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:scaleType="centerInside"
+        android:singleLine="true"
+        android:text="Settings"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Profile Picture -->
+
+    <FrameLayout
+        android:id="@+id/profilePictureContainer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBackground" />
+
+    <FrameLayout
+        android:id="@+id/about"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePictureContainer">
+
+        <!-- ImageView -->
+
+        <ImageView
+            android:id="@+id/SettingIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_user" />
+
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/SettingText"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="34dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Account"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/SettingButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_right_arrow" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/footerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/essential_bright"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <!-- Icons -->
+
+    <ImageView
+        android:id="@+id/iconHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_default"
+        app:layout_constraintBottom_toBottomOf="@id/footerBackground"
+        app:layout_constraintEnd_toStartOf="@+id/iconHistory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/footerBackground" />
+
+    <ImageView
+        android:id="@+id/iconHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_history_default"
+        app:layout_constraintBottom_toBottomOf="@id/footerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/footerBackground" />
+
+    <ImageView
+        android:id="@+id/iconSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_setting_outline"
+        app:layout_constraintBottom_toBottomOf="@id/footerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iconHistory"
+        app:layout_constraintTop_toTopOf="@id/footerBackground" />
+
+    <FrameLayout
+        android:id="@+id/pc"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about">
+
+        <!-- ImageView -->
+
+        <ImageView
+            android:id="@+id/icpc"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_payment" />
+
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/pctext"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="34dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/montserrat_semibold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Payment Cards"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/pca"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_right_arrow" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/lo"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/frame_box"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pc">
+
+        <!-- ImageView -->
+
+        <ImageView
+            android:id="@+id/iclo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logout" />
+
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/lotext"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginStart="34dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:fontFamily="@font/montserrat_semibold"
+            android:singleLine="true"
+            android:text="Logout"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/loa"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_right_arrow" />
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

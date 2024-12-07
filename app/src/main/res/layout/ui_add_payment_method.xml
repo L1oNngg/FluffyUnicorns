@@ -20,6 +20,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
+        android:fontFamily="@font/montserrat_regular"
         android:hint="Enter your Name"
         android:inputType="text"
         android:padding="10dp"
@@ -49,16 +50,19 @@
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <TextView
         android:layout_width="314.2dp"
         android:layout_height="33.92dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:scaleType="centerInside"
         android:singleLine="true"
-        android:src="@drawable/lorem_add_payment_method"
+        android:text="Add Payment Method"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +74,7 @@
         android:layout_height="21dp"
         android:layout_marginTop="40dp"
         android:gravity="left|center_vertical"
+        android:fontFamily="@font/montserrat_regular"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
@@ -87,6 +92,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
         android:hint="XXXX XXXX XXXX XXXX"
+        android:fontFamily="@font/montserrat_regular"
         android:inputType="text"
         android:padding="10dp"
         android:textColor="#FF000000"
@@ -96,6 +102,7 @@
 
     <TextView
         android:id="@+id/tvCard"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginTop="16dp"
@@ -127,7 +134,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
-        android:hint="MM/YY"
+        android:fontFamily="@font/montserrat_regular"
+        android:hint="MM / YY"
         android:inputType="text"
         android:padding="10dp"
         android:textColor="#FF000000"
@@ -138,6 +146,7 @@
     <TextView
         android:id="@+id/tvExpire"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_height="21dp"
         android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
@@ -160,7 +169,8 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
-        android:text="Security Code *"
+        android:text="CVV / CVC *"
+        android:fontFamily="@font/montserrat_regular"
         android:textColor="@color/text_black"
         android:textStyle="bold"
         android:textSize="16dp"
@@ -174,9 +184,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/frame_box"
+        android:hint="0 0 0"
         android:inputType="text"
+        android:fontFamily="@font/montserrat_regular"
         android:padding="10dp"
-
         android:textColor="#FF000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/etExpire"
@@ -193,6 +204,7 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
+        android:fontFamily="@font/montserrat_regular"
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvPC" />
 
@@ -205,6 +217,7 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
+        android:fontFamily="@font/montserrat_regular"
         android:text="Post Code *"
         android:textColor="@color/text_black"
         android:textStyle="bold"
@@ -223,6 +236,7 @@
         android:padding="10dp"
         android:textColor="#FF000000"
         android:textSize="16sp"
+        android:fontFamily="@font/montserrat_regular"
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
 
@@ -237,6 +251,7 @@
         android:singleLine="true"
         android:text="Country *"
         android:textColor="@color/text_black"
+        android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@id/etCountry"
@@ -254,6 +269,7 @@
         android:text="Save as default"
         android:textColor="@color/text_black"
         android:textStyle="bold"
+        android:fontFamily="@font/montserrat_regular"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/etCountry" />
@@ -293,6 +309,7 @@
         android:textAllCaps="false"
         android:textColor="#FFF1F1F1"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCountry" />
