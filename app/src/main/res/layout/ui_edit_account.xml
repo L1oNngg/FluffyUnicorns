@@ -82,7 +82,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_camera" />
+                android:background="@drawable/camera" />
         </FrameLayout>
     </FrameLayout>
 
