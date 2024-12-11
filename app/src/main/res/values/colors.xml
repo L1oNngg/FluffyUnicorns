@@ -20,6 +20,7 @@
     <color name="secondary">#FFFFFF</color>
     <color name="essential_bright">#D7CFCC</color>
     <color name="essential_dark">#231F20</color>
+    <color name="essential_grey">#CECECE</color>
     <!--blue-->
     <color name="b_0">#FFFFFF</color>
     <color name="b_50">#BCBDBC</color>
@@ -42,6 +43,7 @@
     <color name="surface_primary">@color/primary</color>
     <color name="surface_bright">@color/essential_bright</color>
     <color name="surface_dark">@color/essential_dark</color>
+    <color name="surface_grey">@color/essential_grey</color>
     <color name="surface_white">@color/b_0</color>
     <!--border-->
     <color name="border_white">@color/b_0</color>
