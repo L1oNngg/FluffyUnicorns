@@ -149,8 +149,6 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
-    <!-- Email -->
-
     <TextView
         android:id="@+id/Lastname"
         android:layout_width="170dp"
@@ -166,6 +164,8 @@
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/Firstname"
         app:layout_constraintTop_toBottomOf="@+id/tvLastnameLabel" />
+
+    <!-- Email -->
 
     <TextView
         android:id="@+id/textView15"
@@ -196,19 +196,49 @@
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-    <!-- Phone -->
+    <!-- Identity Card Number -->
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Identity Card Number"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/IDNumber"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/IDNumber"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/frame_box"
+        android:fontFamily="@font/montserrat_bold"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <!-- Phone -->
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Phone"
         android:textColor="@color/text_black"
-        android:textStyle="bold"
         android:textSize="16dp"
-        android:fontFamily="@font/montserrat_bold"
-        app:layout_constraintStart_toStartOf="@id/phone"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@+id/IDNumber"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -224,7 +254,7 @@
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <!-- Back Button -->
     <Button
