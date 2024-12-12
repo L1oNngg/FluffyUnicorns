@@ -1,14 +1,12 @@
-package com.example.fluffyunicorns
+package com.example.fluffyunicorns.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.FrameLayout
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.fluffyunicorns.R
+import com.example.fluffyunicorns.UserAccountActivity
 
 class SettingsTabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
