@@ -97,7 +97,7 @@
             android:layout_height="24dp"
             android:layout_gravity="left|center_vertical"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_user" />
+            android:src="@drawable/ic_user"/>
 
         <!-- TextView -->
         <TextView
