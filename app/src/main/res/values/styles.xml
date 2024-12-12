@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Active Text Appearance -->
+    <style name="BottomNavTextAppearanceActive" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary</item> <!-- Use the color shown in the active icon -->
+        <item name="android:fontFamily">@font/montserrat_black</item> <!-- Optional: Include a custom font -->
+    </style>
+
+    <!-- Inactive Text Appearance -->
+    <style name="BottomNavTextAppearanceInactive" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary</item> <!-- Use the color shown in inactive icons -->
+        <item name="android:fontFamily">@font/montserrat_black</item> <!-- Optional: Include a custom font -->
+    </style>
+</resources>
