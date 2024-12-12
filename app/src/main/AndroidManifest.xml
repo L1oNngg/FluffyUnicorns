@@ -28,7 +28,7 @@
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.AddPaymentMethodActivity" />
         <activity android:name=".activity.ForgotPasswordActivity" />
-        <activity android:name=".UserAccountActivity" />
+        <activity android:name=".activity.UserAccountActivity" />
         <activity android:name=".activity.EditUserAccountActivity" />
         <activity android:name=".activity.SettingsTabActivity" />
         <activity android:name=".activity.PaymentCardsActivity" />
