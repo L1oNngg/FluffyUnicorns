@@ -6,7 +6,6 @@ import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.UserAccountActivity
 
 class SettingsTabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

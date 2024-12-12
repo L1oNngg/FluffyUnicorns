@@ -7,7 +7,6 @@ import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.UserAccountActivity
 
 class EditUserAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
