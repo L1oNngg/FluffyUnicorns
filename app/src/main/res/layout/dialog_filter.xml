@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Summary -->
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 Người lớn, 0 Trẻ em, 0 Em bé"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <!-- Adult Selector -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Người lớn (Từ 12 tuổi)"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btnMinusAdults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+        <TextView
+            android:id="@+id/tvAdults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="1" />
+        <Button
+            android:id="@+id/btnPlusAdults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Child Selector -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Trẻ em (Từ 2 - 11 tuổi)"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btnMinusChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+        <TextView
+            android:id="@+id/tvChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="0" />
+        <Button
+            android:id="@+id/btnPlusChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Infant Selector -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Em bé (Dưới 2 tuổi)"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btnMinusInfants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+        <TextView
+            android:id="@+id/tvInfants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="0" />
+        <Button
+            android:id="@+id/btnPlusInfants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xong" />
+</LinearLayout>
