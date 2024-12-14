@@ -11,7 +11,6 @@ import com.example.fluffyunicorns.R
 class AddPaymentMethodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_add_payment_method)
 
         val SaveBtn: Button = findViewById(R.id.SaveBtn)

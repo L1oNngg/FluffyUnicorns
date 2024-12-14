@@ -11,7 +11,6 @@ import com.example.fluffyunicorns.R
 class ForgotPasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_forget_password)
 
         val resetPasswordButton: Button = findViewById(R.id.resetPasswordButton)

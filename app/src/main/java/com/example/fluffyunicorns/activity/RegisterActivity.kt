@@ -19,7 +19,6 @@ import retrofit2.Response
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_register)
 
         val firstNameInput: EditText = findViewById(R.id.firstname)

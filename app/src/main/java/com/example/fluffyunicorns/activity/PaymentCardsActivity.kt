@@ -11,7 +11,6 @@ import com.example.fluffyunicorns.R
 class PaymentCardsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_payment_cards)
 
         val imageView7: ImageView = findViewById(R.id.imageView7)
