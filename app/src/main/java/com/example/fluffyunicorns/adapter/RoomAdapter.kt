@@ -24,7 +24,7 @@ class RoomAdapter(private var rooms: List<Room>) :
         val room = rooms[position]
         holder.roomName.text = room.name
         holder.roomPrice.text = room.price
-        holder.roomCapacity.text = "Capacity: ${room.capacity} persons"
+        holder.roomCapacity.text = room.capacity.toString()
     }
 
     override fun getItemCount(): Int = rooms.size

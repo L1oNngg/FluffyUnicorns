@@ -1,6 +1,7 @@
 package com.example.fluffyunicorns.activity
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.text.Editable
@@ -8,8 +9,10 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -87,6 +90,13 @@ class MenuActivity : AppCompatActivity() {
         filterBtn.setOnClickListener {
             showBottomSheetDialog()
         }
+
+        val LoginBtn: ImageView = findViewById(R.id.iconSettings)
+
+        LoginBtn.setOnClickListener {
+            val intent = Intent(this, SettingsTabActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showBottomSheetDialog() {
@@ -152,7 +162,7 @@ class MenuActivity : AppCompatActivity() {
         }
 
         btnDone.setOnClickListener {
-            etSearch.setText("$adults Người lớn, $children Trẻ em, $infants Em bé")
+            etSearch.setText("$adults Người lớn, $children Trẻ em, $infants Phòng")
             dialog.dismiss()
         }
 
@@ -165,9 +175,9 @@ class MenuActivity : AppCompatActivity() {
 
     private fun loadDummyData() {
         roomList.clear()
-        roomList.add(Room("Deluxe Room - King Bed", "$120", 2))
-        roomList.add(Room("Family Suite - 2 Beds", "$200", 4))
-        roomList.add(Room("Standard Room - Queen Bed", "$80", 2))
+        roomList.add(Room("Deluxe Room - King Bed", "120", 2))
+        roomList.add(Room("Family Suite - 2 Beds", "200", 4))
+        roomList.add(Room("Standard Room - Queen Bed", "80", 2))
         adapter.notifyDataSetChanged()
     }
 

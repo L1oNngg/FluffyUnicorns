@@ -2,16 +2,11 @@ package com.example.fluffyunicorns.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.api.RetrofitClient
-import com.example.fluffyunicorns.model.AaaResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

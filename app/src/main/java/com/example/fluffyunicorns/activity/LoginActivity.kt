@@ -11,7 +11,6 @@ import com.example.fluffyunicorns.R
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_login)
 
         val tvRegister: TextView = findViewById(R.id.tvRegister)
@@ -24,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         val LoginBtn: Button = findViewById(R.id.LoginBtn)
 
         LoginBtn.setOnClickListener {
-            val intent = Intent(this, SettingsTabActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
