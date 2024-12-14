@@ -11,7 +11,6 @@ import com.example.fluffyunicorns.R
 class EditUserAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_edit_account)
 
         val backIcon: ImageButton = findViewById(R.id.backIcon)

@@ -11,7 +11,6 @@ import com.example.fluffyunicorns.R
 class UserAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_account)
 
         val button: Button = findViewById(R.id.button)
@@ -36,4 +35,3 @@ class UserAccountActivity : AppCompatActivity() {
         }
     }
 }
-

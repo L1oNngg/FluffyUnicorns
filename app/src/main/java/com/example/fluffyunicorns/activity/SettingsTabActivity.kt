@@ -2,7 +2,9 @@ package com.example.fluffyunicorns.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
@@ -10,7 +12,6 @@ import com.example.fluffyunicorns.R
 class SettingsTabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_settings_tab)
 
         val about: FrameLayout = findViewById(R.id.about)
@@ -31,6 +32,13 @@ class SettingsTabActivity : AppCompatActivity() {
 
         lo.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val HomeBtn: ImageView = findViewById(R.id.iconHome)
+
+        HomeBtn.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
     }
