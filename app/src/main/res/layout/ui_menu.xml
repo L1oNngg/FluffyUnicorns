@@ -130,10 +130,10 @@
         android:layout_marginTop="16dp"
         android:text="Most suitable for you"
         android:textSize="25dp"
+        android:textColor="@color/text_black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llSearch" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRecommendations"

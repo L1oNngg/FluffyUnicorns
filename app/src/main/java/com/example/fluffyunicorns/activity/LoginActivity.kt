@@ -11,6 +11,7 @@ import com.example.fluffyunicorns.R
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.ui_login)
 
         val tvRegister: TextView = findViewById(R.id.tvRegister)
