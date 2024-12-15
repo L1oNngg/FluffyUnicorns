@@ -288,7 +288,7 @@
         android:layout_marginBottom="32dp"
         android:buttonTint="@color/border_grey"
         android:text="Remember me"
-        android:textColor="@color/text_grey"
+        android:textColor="@color/border_grey"
         android:textSize="14dp"
         android:fontFamily="@font/montserrat_regular"
 
