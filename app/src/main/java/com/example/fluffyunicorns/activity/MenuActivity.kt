@@ -42,7 +42,7 @@ class MenuActivity : AppCompatActivity() {
 
     private var adults = 1
     private var children = 0
-    private var infants = 0
+    private var rooms = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,16 +113,16 @@ class MenuActivity : AppCompatActivity() {
         val btnPlusChildren = bottomSheetView.findViewById<Button>(R.id.btnPlusChildren)
         val tvChildren = bottomSheetView.findViewById<TextView>(R.id.tvChildren)
 
-        val btnMinusInfants = bottomSheetView.findViewById<Button>(R.id.btnMinusInfants)
-        val btnPlusInfants = bottomSheetView.findViewById<Button>(R.id.btnPlusInfants)
-        val tvInfants = bottomSheetView.findViewById<TextView>(R.id.tvInfants)
+        val btnMinusRooms = bottomSheetView.findViewById<Button>(R.id.btnMinusRooms)
+        val btnPlusRooms = bottomSheetView.findViewById<Button>(R.id.btnPlusRooms)
+        val tvRooms = bottomSheetView.findViewById<TextView>(R.id.tvRooms)
 
         val btnDone = bottomSheetView.findViewById<Button>(R.id.btnDone)
 
         // Initialize values
         tvAdults.text = adults.toString()
         tvChildren.text = children.toString()
-        tvInfants.text = infants.toString()
+        tvRooms.text = rooms.toString()
         updateSummary(tvSummary)
 
         btnMinusAdults.setOnClickListener {
@@ -149,20 +149,20 @@ class MenuActivity : AppCompatActivity() {
             updateSummary(tvSummary)
         }
 
-        btnMinusInfants.setOnClickListener {
-            infants = (infants - 1).coerceAtLeast(0)
-            tvInfants.text = infants.toString()
+        btnMinusRooms.setOnClickListener {
+            rooms = (rooms - 1).coerceAtLeast(0)
+            tvRooms.text = rooms.toString()
             updateSummary(tvSummary)
         }
 
-        btnPlusInfants.setOnClickListener {
-            infants++
-            tvInfants.text = infants.toString()
+        btnPlusRooms.setOnClickListener {
+            rooms++
+            tvRooms.text = rooms.toString()
             updateSummary(tvSummary)
         }
 
         btnDone.setOnClickListener {
-            etSearch.setText("$adults Người lớn, $children Trẻ em, $infants Phòng")
+            etSearch.setText("$adults Adults, $children Children, $rooms Room")
             dialog.dismiss()
         }
 
@@ -170,7 +170,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun updateSummary(tvSummary: TextView) {
-        tvSummary.text = "$adults Người lớn, $children Trẻ em, $infants Em bé"
+        tvSummary.text = "$adults Adults, $children Children, $rooms Room"
     }
 
     private fun loadDummyData() {
