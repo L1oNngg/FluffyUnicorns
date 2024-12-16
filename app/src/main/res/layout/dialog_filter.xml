@@ -11,6 +11,7 @@
         android:id="@+id/tvSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
         android:text="1 Adult, 0 Children, 0 Room"
         android:textStyle="bold"
         android:paddingBottom="16dp" />
@@ -27,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Adult (>= 18 Years Old)"
+            android:fontFamily="@font/montserrat_regular"
             android:textSize="16sp" />
         <Button
             android:id="@+id/btnMinusAdults"
@@ -38,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:fontFamily="@font/montserrat_regular"
             android:text="1" />
         <Button
             android:id="@+id/btnPlusAdults"
@@ -57,6 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/montserrat_regular"
             android:text="Children"
             android:textSize="16sp" />
         <Button
@@ -68,6 +72,7 @@
             android:id="@+id/tvChildren"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
             android:padding="8dp"
             android:text="0" />
         <Button
@@ -89,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Room"
+            android:fontFamily="@font/montserrat_regular"
             android:textSize="16sp" />
         <Button
             android:id="@+id/btnMinusRooms"
@@ -100,6 +106,7 @@
             android:id="@+id/tvRooms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
             android:padding="8dp"
             android:text="0" />
         <Button
@@ -114,5 +121,6 @@
         android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Done" />
 </LinearLayout>
