@@ -43,8 +43,8 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="44dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_left_arrow"
         app:layout_constraintStart_toStartOf="@id/myBarrier"
@@ -52,7 +52,7 @@
 
     <TextView
         android:layout_width="314.2dp"
-        android:layout_height="33.92dp"
+        android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
