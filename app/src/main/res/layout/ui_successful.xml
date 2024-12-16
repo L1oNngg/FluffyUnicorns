@@ -20,10 +20,11 @@
 
   <TextView
       android:id="@+id/textView"
-      android:layout_width="300dp"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="35dp"
       android:text="Payment Successful"
+      android:fontFamily="@font/montserrat_bold"
       android:textSize="30dp"
       android:textColor="@color/text_black"
       android:textStyle="bold"
@@ -39,6 +40,7 @@
       android:layout_marginTop="15dp"
       android:text="Your hotel booking is secured and your confirmation has been sent to your email."
       android:textAlignment="center"
+      android:fontFamily="@font/montserrat_regular"
       android:textColor="@color/text_grey"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.495"
@@ -55,6 +57,7 @@
       android:textAllCaps="false"
       android:textColor="@color/text_white"
       android:textSize="20sp"
+      android:fontFamily="@font/montserrat_bold"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.491"

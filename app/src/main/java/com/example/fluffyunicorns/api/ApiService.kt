@@ -1,14 +1,15 @@
 package com.example.fluffyunicorns.api
 
-import com.example.fluffyunicorns.model.RegisterRequest
+//import com.example.fluffyunicorns.model.RegisterRequest
 import com.example.fluffyunicorns.model.ApiResponse
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
-    @POST("register")
-    fun registerUser(@Body request: RegisterRequest): Call<ApiResponse>
+    @GET("aaa")
+    fun registerUser(): Call<ApiResponse>
 }
 
 

@@ -48,6 +48,13 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ui_menu)
 
+        val iconSettings: ImageView = findViewById(R.id.iconSettings)
+
+        iconSettings.setOnClickListener {
+            val intent = Intent(this, SettingsTabActivity::class.java)
+            startActivity(intent)
+        }
+
         // Initialize UI components
         TextDate1 = findViewById(R.id.editTextDate1)
         dateBtn1 = findViewById(R.id.date_btn1)
