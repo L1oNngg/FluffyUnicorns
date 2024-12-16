@@ -10,7 +10,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.api.RetrofitClient
-import com.example.fluffyunicorns.model.RegisterRequest
 import com.example.fluffyunicorns.model.ApiResponse
 import retrofit2.Call
 import retrofit2.Callback
