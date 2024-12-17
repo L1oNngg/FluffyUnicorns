@@ -15,7 +15,7 @@ data class RegisterRequest(
 data class Data(val username: String)
 
 // ApiResponse with 'data' as a flexible type
-data class ApiResponse(
+data class RegisterResponse(
     val success: Boolean,
     val code: Int,
     val message: String,

@@ -6,12 +6,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 
-object RetrofitClient {
-    private const val BASE_URL = "https://musical-journey-4jv7x9prqx5wf5r7p.github.dev"
+object Account_RetrofitClient {
+    private const val BASE_URL = "http://10.11.10.13/api/"
 
-    val instance: `/register` by lazy {
-        val logging = HttpLoggingInterceptor()
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY) // Logs full response
+    val instance: AccountAPI by lazy {
+        val logging = HttpLoggingInterceptor().apply {
+            setLevel(HttpLoggingInterceptor.Level.BODY) // Logs full response
+        }
 
         val client = OkHttpClient.Builder()
             .addInterceptor(logging) // Add logging interceptor
@@ -27,7 +28,6 @@ object RetrofitClient {
             .client(client)
             .build()
 
-        retrofit.create(`/register`::class.java)
+        retrofit.create(AccountAPI::class.java)
     }
 }
-
