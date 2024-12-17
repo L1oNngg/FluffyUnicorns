@@ -6,7 +6,7 @@ data class LoginRequest(
 )
 
 data class LoginResponse(
-    val token: String,  // Token received upon successful login
-    val userId: Int,    // User ID
-    val message: String // Login success/failure message
+    val token: String,
+    val userId: Int,
+    val message: String
 )
