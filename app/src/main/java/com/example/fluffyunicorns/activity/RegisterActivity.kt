@@ -8,9 +8,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.api.RetrofitClient
+import com.example.fluffyunicorns.api.Account_RetrofitClient
 import com.example.fluffyunicorns.model.RegisterRequest
-import com.example.fluffyunicorns.model.ApiResponse
+import com.example.fluffyunicorns.model.RegisterResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -106,11 +106,11 @@ class RegisterActivity : AppCompatActivity() {
         )
 
         // Send data to the API
-        RetrofitClient.instance.registerUser(registerRequest)
-            .enqueue(object : Callback<ApiResponse> {
+        Account_RetrofitClient.instance.registerUser(registerRequest)
+            .enqueue(object : Callback<RegisterResponse> {
                 override fun onResponse(
-                    call: Call<ApiResponse>,
-                    response: Response<ApiResponse>
+                    call: Call<RegisterResponse>,
+                    response: Response<RegisterResponse>
                 ) {
                     if (response.isSuccessful) {
                         val apiResponse = response.body()
@@ -129,7 +129,7 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
 
-                override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+                override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
                     Toast.makeText(
                         this@RegisterActivity,
                         "Error: ${t.message}",
