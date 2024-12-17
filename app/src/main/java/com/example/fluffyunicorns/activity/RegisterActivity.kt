@@ -29,12 +29,13 @@ class RegisterActivity : AppCompatActivity() {
         val signInLink: TextView = findViewById(R.id.sign_in_link)
         val registerButton: Button = findViewById(R.id.register_button)
 
+        // Redirect to LoginActivity
         signInLink.setOnClickListener {
-            // Redirect to LoginActivity
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
+        // Register button click listener
         registerButton.setOnClickListener {
             // Get user input
             val firstName = firstNameInput.text.toString()
@@ -44,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
             val password = passwordInput.text.toString()
             val confirmPassword = confirmPasswordInput.text.toString()
 
-            // Validate input
+            // Validate input fields
             if (validateInput(firstName, lastName, email, phone, password, confirmPassword)) {
                 registerUser(firstName, lastName, email, phone, password)
             }
@@ -105,8 +106,10 @@ class RegisterActivity : AppCompatActivity() {
             Password = password
         )
 
+        val accountAPI = Account_RetrofitClient.createService()
+
         // Send data to the API
-        Account_RetrofitClient.instance.registerUser(registerRequest)
+        accountAPI.registerUser(registerRequest)
             .enqueue(object : Callback<RegisterResponse> {
                 override fun onResponse(
                     call: Call<RegisterResponse>,
@@ -119,22 +122,21 @@ class RegisterActivity : AppCompatActivity() {
                             apiResponse?.message ?: "Registration successful",
                             Toast.LENGTH_SHORT
                         ).show()
-                        finish() // Close this activity after registration
+
+                        // Redirect to login screen after successful registration
+                        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                        startActivity(intent)
+                        finish() // Close the current activity after registration
                     } else {
-                        Toast.makeText(
-                            this@RegisterActivity,
-                            "Failed: ${response.errorBody()?.string()}",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        // Display error message from API response
+                        val errorMessage = response.errorBody()?.string() ?: "Registration failed"
+                        Toast.makeText(this@RegisterActivity, "Failed: $errorMessage", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                    Toast.makeText(
-                        this@RegisterActivity,
-                        "Error: ${t.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    // Handle failure (network issues, etc.)
+                    Toast.makeText(this@RegisterActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
                 }
             })
     }

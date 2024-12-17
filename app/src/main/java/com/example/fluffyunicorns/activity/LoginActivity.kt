@@ -52,8 +52,11 @@ class LoginActivity : AppCompatActivity() {
             // Create LoginRequest object
             val loginRequest = LoginRequest(username, password)
 
+            // Get API service instance
+            val accountAPI = Account_RetrofitClient.createService()
+
             // Make API call using Retrofit
-            Account_RetrofitClient.instance.loginUser(loginRequest)
+            accountAPI.loginUser(loginRequest)
                 .enqueue(object : Callback<LoginResponse> {
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                         if (response.isSuccessful && response.body() != null) {

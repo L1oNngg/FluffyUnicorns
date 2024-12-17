@@ -9,7 +9,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 object Account_RetrofitClient {
     private const val BASE_URL = "http://10.11.10.13/api/"
 
-    val instance: AccountAPI by lazy {
+    // Create and expose a Retrofit service interface instance
+    val instance: Retrofit by lazy {
         val logging = HttpLoggingInterceptor().apply {
             setLevel(HttpLoggingInterceptor.Level.BODY) // Logs full response
         }
@@ -22,12 +23,13 @@ object Account_RetrofitClient {
             .setLenient()
             .create()
 
-        val retrofit = Retrofit.Builder()
+        Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build()
-
-        retrofit.create(AccountAPI::class.java)
     }
+
+    // Create the service from the Retrofit instance
+    fun createService(): AccountAPI = instance.create(AccountAPI::class.java)
 }
