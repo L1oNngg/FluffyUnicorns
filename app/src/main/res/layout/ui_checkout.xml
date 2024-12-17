@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CheckoutActivity">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/myBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="btnNext" />
+
+    <!-- Top Header -->
+    <ImageView
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="top|left"
+        android:background="@color/essential_bright"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="314.2dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:scaleType="centerInside"
+        android:singleLine="true"
+        android:text="Checkout"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backIcon"
+        android:layout_width="24dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/essential_bright"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="@id/myBarrier"
+        app:layout_constraintTop_toTopOf="@id/headerBackground" />
+
+
+
+    <!-- Next Btn -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BookingBox"
+        android:layout_width="351dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/frame_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBackground">
+
+        <TextView
+            android:id="@+id/BookingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Your Booking"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/CheckInTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Check-in"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BookingTitle" />
+
+        <TextView
+            android:id="@+id/CheckOutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Check-out"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CheckInTitle" />
+
+        <TextView
+            android:id="@+id/GuestTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Guest"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CheckOutTitle" />
+
+        <TextView
+            android:id="@+id/RoomTypeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Room Type"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GuestTitle" />
+
+        <TextView
+            android:id="@+id/check_in_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
+            android:text="12/12/2024"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/check_out_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="14/12/2024"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_in_date" />
+
+        <TextView
+            android:id="@+id/Occupacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="4"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_out_date" />
+
+        <TextView
+            android:id="@+id/RoomTypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Double superior king bed"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Occupacity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/PriceDetailsBox"
+        android:layout_width="351dp"
+        android:layout_height="255dp"
+        android:background="@drawable/frame_box"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookingBox">
+
+        <TextView
+            android:id="@+id/PriceDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Details"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="157dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/TotalNightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Night"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="150dp" />
+
+        <TextView
+            android:id="@+id/PricePerNightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price Per Night"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="204dp"
+            tools:layout_editor_absoluteY="150dp" />
+
+        <TextView
+            android:id="@+id/ServicePart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <TextView
+            android:id="@+id/LaundryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laundry"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <TextView
+            android:id="@+id/SpaTreatmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spa Treatment"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="51dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="99dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/registerbtn_background"
+        android:gravity="center"
+        android:paddingLeft="59dp"
+        android:paddingTop="5dp"
+        android:paddingRight="59dp"
+        android:paddingBottom="5dp"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/text_black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="735dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

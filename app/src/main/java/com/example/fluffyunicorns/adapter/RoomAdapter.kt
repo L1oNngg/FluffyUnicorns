@@ -3,7 +3,7 @@ package com.example.fluffyunicorns.adapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.Room
+import com.example.fluffyunicorns.model.Room
 
 class RoomAdapter(private var rooms: List<Room>) :
     RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
