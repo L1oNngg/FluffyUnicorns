@@ -15,6 +15,9 @@
         android:theme="@style/Theme.FluffyUnicorns"
         tools:targetApi="31">
         <activity
+            android:name=".activity.CheckoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ServiceActivity"
             android:exported="false" />
         <activity

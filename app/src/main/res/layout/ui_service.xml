@@ -56,13 +56,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/headerBackground" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/serviceRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBackground" />
+
     <Button
         android:id="@+id/nextBtn"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/btn_round"
-        android:text="Next"
         android:fontFamily="@font/montserrat_bold"
+        android:text="Next"
         android:textAllCaps="false"
         android:textColor="@color/text_white"
         android:textSize="20sp"
@@ -70,5 +82,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="665dp" />
+        app:layout_constraintTop_toBottomOf="@+id/serviceRecyclerView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

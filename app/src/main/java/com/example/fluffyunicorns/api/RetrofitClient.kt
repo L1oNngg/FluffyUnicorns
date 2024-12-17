@@ -1,16 +1,33 @@
 package com.example.fluffyunicorns.api
 
+import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 
 object RetrofitClient {
-    private const val BASE_URL = "https://fictional-space-goldfish-5gq9qjp4qrvj3p7j4-8080.app.github.dev/" // Update this to your API URL
+    private const val BASE_URL = "https://musical-journey-4jv7x9prqx5wf5r7p.github.dev"
 
-    val instance: ApiService by lazy {
+    val instance: `/register` by lazy {
+        val logging = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY) // Logs full response
+
+        val client = OkHttpClient.Builder()
+            .addInterceptor(logging) // Add logging interceptor
+            .build()
+
+        val gson = GsonBuilder()
+            .setLenient()
+            .create()
+
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .client(client)
             .build()
-        retrofit.create(ApiService::class.java)
+
+        retrofit.create(`/register`::class.java)
     }
 }
+

@@ -12,12 +12,11 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.Room
+import com.example.fluffyunicorns.model.Room
 import com.example.fluffyunicorns.adapter.RoomAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.Calendar
