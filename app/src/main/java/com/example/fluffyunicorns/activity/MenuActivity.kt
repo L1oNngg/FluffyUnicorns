@@ -18,7 +18,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.model.Room
 import com.example.fluffyunicorns.adapter.RoomAdapter
+import com.example.fluffyunicorns.api.AccountAPI
+import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.model.AccountResponse
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.Calendar
 import java.util.Locale
 
@@ -30,7 +36,8 @@ class MenuActivity : AppCompatActivity() {
     lateinit var dateBtn2: ImageButton
     private val calendar = Calendar.getInstance()
 
-    // RecyclerView and Search Elements
+    private lateinit var tvGreeting: TextView
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: RoomAdapter
     private val roomList = mutableListOf<Room>() // Dummy data for RecyclerView
@@ -52,6 +59,20 @@ class MenuActivity : AppCompatActivity() {
         iconSettings.setOnClickListener {
             val intent = Intent(this, SettingsTabActivity::class.java)
             startActivity(intent)
+        }
+
+        // API
+        tvGreeting = findViewById(R.id.tvGreeting)
+
+        // Retrieve customerID from SharedPreferences
+        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val customerID = sharedPreferences.getInt("customerID", -1)
+
+        if (customerID != -1) {
+            // Fetch user account details if customerID is valid
+            fetchAccountDetails(customerID)
+        } else {
+            Toast.makeText(this, "User information not found", Toast.LENGTH_SHORT).show()
         }
 
         // Initialize UI components
@@ -224,5 +245,30 @@ class MenuActivity : AppCompatActivity() {
             calendar.get(Calendar.DAY_OF_MONTH)
         )
         datePickerDialog.show()
+    }
+
+    private fun fetchAccountDetails(customerID: Int) {
+        // Get an instance of the API service
+        val accountAPI = Account_RetrofitClient.instance.create(AccountAPI::class.java)
+        val call = accountAPI.getAccountDetails(customerID)
+
+        // Make the API call
+        call.enqueue(object : Callback<AccountResponse> {
+            override fun onResponse(call: Call<AccountResponse>, response: Response<AccountResponse>) {
+                if (response.isSuccessful) {
+                    val accountData = response.body()?.data
+                    if (accountData != null) {
+                        // Populate the UI with account details, handle potential nulls
+                        tvGreeting.text = ("Hello, \n" + accountData.FirstName + " " + accountData.LastName) ?: "N/A"
+                    }
+                } else {
+                    Toast.makeText(this@MenuActivity, "Failed to load user information", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<AccountResponse>, t: Throwable) {
+                Toast.makeText(this@MenuActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }
