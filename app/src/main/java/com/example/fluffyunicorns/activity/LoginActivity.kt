@@ -20,59 +20,65 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ui_login)
 
+        // Link UI components to variables
         val usernameInput: EditText = findViewById(R.id.usernameInput)
         val passwordInput: EditText = findViewById(R.id.passwordInput)
         val loginBtn: Button = findViewById(R.id.LoginBtn)
         val tvRegister: TextView = findViewById(R.id.tvRegister)
         val tvForget: TextView = findViewById(R.id.tvForget)
 
-        // Navigate to RegisterActivity
+        // Navigate to the RegisterActivity when the "Register" TextView is clicked
         tvRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        // Navigate to ForgotPasswordActivity
+        // Navigate to the ForgotPasswordActivity when the "Forgot Password" TextView is clicked
         tvForget.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 
-        // Login Button Click Listener
+        // Handle the Login button click
         loginBtn.setOnClickListener {
+            // Get the username and password from the input fields
             val username = usernameInput.text.toString().trim()
             val password = passwordInput.text.toString().trim()
 
-            // Validate input fields
+            // Validate that the inputs are not empty
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Create LoginRequest object
+            // Create a LoginRequest object
             val loginRequest = LoginRequest(username, password)
 
-            // Get API service instance
+            // Use Retrofit to send a login request to the API
             val accountAPI = Account_RetrofitClient.createService()
-
-            // Make API call using Retrofit
             accountAPI.loginUser(loginRequest)
                 .enqueue(object : Callback<LoginResponse> {
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                         if (response.isSuccessful && response.body() != null) {
                             val loginResponse = response.body()!!
 
-                            // Check if login is successful
                             if (loginResponse.token.isNotEmpty()) {
+                                val customerID = loginResponse.customerID // Get the customerID from the response
+
+                                // Save the token and customerID in SharedPreferences
+                                val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+                                val editor = sharedPreferences.edit()
+                                editor.putString("token", loginResponse.token)
+                                editor.putInt("customerID", customerID) // Save customerID
+                                editor.apply()
+
                                 Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT).show()
 
-                                // Navigate to MenuActivity on success
+                                // Navigate to the UserAccountActivity
                                 val intent = Intent(this@LoginActivity, MenuActivity::class.java)
-                                intent.putExtra("token", loginResponse.token)
-                                intent.putExtra("userId", loginResponse.userId)
                                 startActivity(intent)
 
-                                // Optional: Finish LoginActivity to prevent back navigation
+                                // Close the LoginActivity to prevent back navigation
                                 finish()
                             } else {
                                 Toast.makeText(this@LoginActivity, "Login failed: Invalid credentials", Toast.LENGTH_SHORT).show()

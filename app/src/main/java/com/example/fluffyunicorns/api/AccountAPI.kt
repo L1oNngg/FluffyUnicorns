@@ -18,6 +18,6 @@ interface AccountAPI {
     @POST("login")
     fun loginUser(@Body loginRequest: LoginRequest): Call<LoginResponse>
 
-    @GET("api/account/{id}")
+    @GET("account/{id}")
     fun getAccountDetails(@Path("id") id: Int): Call<AccountResponse>
 }
