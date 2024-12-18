@@ -66,7 +66,7 @@ class HistoryTabActivity : AppCompatActivity() {
             override fun onResponse(call: Call<BookingResponse>, response: Response<BookingResponse>) {
                 if (response.isSuccessful) {
                     val bookings = response.body()?.data ?: emptyList()
-                    bookingAdapter = BookingHistoryAdapter(bookings)
+                    bookingAdapter = BookingHistoryAdapter(this@HistoryTabActivity, bookings)
                     recyclerView.adapter = bookingAdapter
                 }
             }
