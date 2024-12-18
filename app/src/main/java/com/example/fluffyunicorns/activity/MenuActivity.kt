@@ -61,6 +61,13 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val iconHistory: ImageView = findViewById(R.id.iconHistory)
+
+        iconHistory.setOnClickListener {
+            val intent = Intent(this, HistoryTabActivity::class.java)
+            startActivity(intent)
+        }
+
         // API
         tvGreeting = findViewById(R.id.tvGreeting)
 
@@ -116,13 +123,6 @@ class MenuActivity : AppCompatActivity() {
         // Set up BottomSheetDialog for filter button
         filterBtn.setOnClickListener {
             showBottomSheetDialog()
-        }
-
-        val LoginBtn: ImageView = findViewById(R.id.iconSettings)
-
-        LoginBtn.setOnClickListener {
-            val intent = Intent(this, SettingsTabActivity::class.java)
-            startActivity(intent)
         }
     }
 

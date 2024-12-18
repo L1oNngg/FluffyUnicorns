@@ -41,5 +41,12 @@ class SettingsTabActivity : AppCompatActivity() {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
+
+        val iconHistory: ImageView = findViewById(R.id.iconHistory)
+
+        iconHistory.setOnClickListener {
+            val intent = Intent(this, HistoryTabActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

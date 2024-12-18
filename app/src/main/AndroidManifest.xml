@@ -48,6 +48,7 @@
         <activity android:name=".activity.EditUserAccountActivity" />
         <activity android:name=".activity.SettingsTabActivity" />
         <activity android:name=".activity.PaymentCardsActivity" />
+        <activity android:name=".activity.HistoryTabActivity" />
     </application>
 
 </manifest>
