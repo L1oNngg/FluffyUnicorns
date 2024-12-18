@@ -6,18 +6,19 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.fluffyunicorns.R
 
 class BookingDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.ui_booking_details)
-
-        val backIcon: ImageView = findViewById(R.id.backIcon)
-
-        backIcon.setOnClickListener {
-            val intent = Intent(this, HistoryTabActivity::class.java)
-            startActivity(intent)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_booking_details)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
     }
 }
