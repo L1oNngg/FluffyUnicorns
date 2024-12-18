@@ -3,7 +3,6 @@ package com.example.fluffyunicorns.activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -36,7 +35,7 @@ class UserAccountActivity : AppCompatActivity() {
 
         // Retrieve customerID from SharedPreferences
         val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        val customerID = sharedPreferences.getInt("customerID", -1) // Default value is -1 if not found
+        val customerID = sharedPreferences.getInt("customerID", -1)
 
         if (customerID != -1) {
             // Fetch user account details if customerID is valid
