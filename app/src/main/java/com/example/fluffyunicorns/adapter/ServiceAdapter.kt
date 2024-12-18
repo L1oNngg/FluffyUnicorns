@@ -18,12 +18,13 @@ class ServiceAdapter(
     inner class ServiceViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val icon: ImageView = view.findViewById(R.id.imageViewServiceIcon)
         val name: TextView = view.findViewById(R.id.textViewServiceName)
+        val price: TextView = view.findViewById(R.id.textViewServicePrice)
         val checkBox: CheckBox = view.findViewById(R.id.checkBoxService)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServiceViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.ui_service, parent, false)
+            .inflate(R.layout.service_item, parent, false)
         return ServiceViewHolder(view)
     }
 
@@ -32,9 +33,8 @@ class ServiceAdapter(
 
         // Bind data
         holder.name.text = service.name
+        holder.price.text = String.format("$%.2f", service.price)
         holder.checkBox.isChecked = service.isSelected
-
-        // Bind the image resource to the ImageView
         holder.icon.setImageResource(service.iconResId)
 
         // Set listeners
@@ -46,4 +46,3 @@ class ServiceAdapter(
 
     override fun getItemCount(): Int = serviceList.size
 }
-

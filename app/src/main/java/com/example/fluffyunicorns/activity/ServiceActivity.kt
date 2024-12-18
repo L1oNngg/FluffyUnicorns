@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.adapter.ServiceAdapter
@@ -29,10 +30,10 @@ class ServiceActivity : AppCompatActivity() {
         )
 
         // Set up RecyclerView
-        adapter = ServiceAdapter(services) { service ->
-            // No need to calculate total here
-        }
-        findViewById<RecyclerView>(R.id.serviceRecyclerView).adapter = adapter
+        val recyclerView = findViewById<RecyclerView>(R.id.serviceRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this) // Set the layout manager
+        adapter = ServiceAdapter(services) {}
+        recyclerView.adapter = adapter // Attach the adapter
 
         // Handle Next button click
         findViewById<Button>(R.id.nextBtn).setOnClickListener {
