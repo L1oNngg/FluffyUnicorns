@@ -1,300 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="851dp"
-    android:background="@drawable/main_background"
-    tools:layout_editor_absoluteX="15dp"
-    tools:layout_editor_absoluteY="275dp">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <!-- Title: The Conjuring -->
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="320dp"
-        android:layout_height="138dp"
-        android:layout_marginTop="28dp"
-        android:src="@drawable/logo_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/myBarrier"
-        app:barrierDirection="start"
-        app:constraint_referenced_ids="register_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Last name *"
-        android:textSize="16dp"
-        android:textColor="@color/text_black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lastname"
-        app:layout_constraintStart_toStartOf="@+id/lastname"
-        tools:ignore="MissingConstraints" />
+        android:background="@drawable/main_background"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="275dp">
 
-    <EditText
-        android:id="@+id/lastname"
-        android:layout_width="170dp"
-        android:layout_height="45dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/frame_box"
-        android:hint="Nguyen"
-        android:padding="10dp"
-        android:textColor="@color/text_grey"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/logoImage"
-        tools:ignore="MissingConstraints" />
+        <!-- Title: The Conjuring -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="320dp"
+            android:layout_height="138dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/logo_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Password -->
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/myBarrier"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <!-- Confirm Password -->
+        <!-- Rest of the layout code remains unchanged -->
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Last name *"
+            android:textSize="16dp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lastname"
+            app:layout_constraintStart_toStartOf="@+id/lastname"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="First name *"
-        android:textColor="@color/text_black"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/firstname"
-        app:layout_constraintStart_toStartOf="@+id/firstname"
-        tools:ignore="MissingConstraints" />
+        <!-- Add all other views as-is -->
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/frame_box"
+            android:hint="Nguyen"
+            android:padding="10dp"
+            android:textColor="@color/text_grey"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/logoImage"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/firstname"
-        android:layout_width="170dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/frame_box"
-        android:fontFamily="@font/montserrat_regular"
+        <!-- Password -->
 
-        android:hint="Van A"
-        android:padding="10dp"
-        android:textColor="#FF343434"
-        android:textSize="16dp"
-        app:layout_constraintStart_toEndOf="@+id/lastname"
-        app:layout_constraintTop_toBottomOf="@+id/logoImage"
-        tools:ignore="MissingConstraints" />
+        <!-- Confirm Password -->
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Username *"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textView14"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="First name *"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/firstname"
+            app:layout_constraintStart_toStartOf="@+id/firstname"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/frame_box"
-        android:hint="example@gmail.com"
-        android:fontFamily="@font/montserrat_regular"
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/frame_box"
+            android:fontFamily="@font/montserrat_regular"
 
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="#FF343434"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/lastname"
-        tools:ignore="MissingConstraints" />
+            android:hint="Van A"
+            android:padding="10dp"
+            android:textColor="#FF343434"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/lastname"
+            app:layout_constraintTop_toBottomOf="@+id/logoImage"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Username *"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/email"
+            app:layout_constraintStart_toStartOf="@+id/email"
+            tools:ignore="MissingConstraints" />
 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Phone *"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintStart_toStartOf="@+id/phone"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/frame_box"
+            android:hint="example@gmail.com"
+            android:fontFamily="@font/montserrat_regular"
 
-    <!-- Remember Me -->
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#FF343434"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/lastname"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/frame_box"
-        android:hint="(+84) XXXX XXX XXX"
-        android:fontFamily="@font/montserrat_regular"
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
 
-        android:inputType="phone"
-        android:padding="10dp"
-        android:textColor="#FF343434"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:ignore="MissingConstraints" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Phone *"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/phone"
+            app:layout_constraintStart_toStartOf="@+id/phone"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Password *"
-        android:textColor="@color/text_black"
-        android:fontFamily="@font/montserrat_bold"
+        <!-- Remember Me -->
 
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/frame_box"
+            android:hint="(+84) XXXX XXX XXX"
+            android:fontFamily="@font/montserrat_regular"
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/frame_box"
-        android:inputType="textPassword"
-        android:fontFamily="@font/montserrat_regular"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textColor="#FF343434"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:ignore="MissingConstraints" />
 
-        android:padding="10dp"
-        android:textColor="#FF343434"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Password *"
+            android:textColor="@color/text_black"
+            android:fontFamily="@font/montserrat_bold"
 
-    <ImageButton
-        android:id="@+id/show_password_button_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/password"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="310dp"
-        android:background="@null"
-        android:contentDescription="Show/Hide password"
-        android:src="@drawable/hidden_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toTopOf="@+id/password" />
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Confirm Password *"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/montserrat_bold"
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/frame_box"
+            android:inputType="textPassword"
+            android:fontFamily="@font/montserrat_regular"
 
-        app:layout_constraintBottom_toTopOf="@+id/confirm_password"
-        app:layout_constraintStart_toStartOf="@+id/confirm_password"
-        tools:ignore="MissingConstraints" />
+            android:padding="10dp"
+            android:textColor="#FF343434"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/confirm_password"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/frame_box"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="#FF343434"
-        android:textSize="16dp"
-        android:fontFamily="@font/montserrat_regular"
+        <ImageButton
+            android:id="@+id/show_password_button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/password"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="310dp"
+            android:background="@null"
+            android:contentDescription="Show/Hide password"
+            android:src="@drawable/hidden_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/password"
+            app:layout_constraintEnd_toEndOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toTopOf="@+id/password" />
 
-        app:layout_constraintStart_toStartOf="@+id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Confirm Password *"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"
 
-    <ImageButton
-        android:id="@+id/show_password_button_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/password"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="310dp"
-        android:background="@null"
-        android:contentDescription="Show/Hide password"
-        android:src="@drawable/hidden_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/confirm_password"
-        app:layout_constraintEnd_toEndOf="@+id/confirm_password"
-        app:layout_constraintStart_toStartOf="@+id/confirm_password"
-        app:layout_constraintTop_toTopOf="@+id/confirm_password" />
+            app:layout_constraintBottom_toTopOf="@+id/confirm_password"
+            app:layout_constraintStart_toStartOf="@+id/confirm_password"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/frame_box"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#FF343434"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat_regular"
+
+            app:layout_constraintStart_toStartOf="@+id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/show_password_button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/password"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="310dp"
+            android:background="@null"
+            android:contentDescription="Show/Hide password"
+            android:src="@drawable/hidden_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/confirm_password"
+            app:layout_constraintEnd_toEndOf="@+id/confirm_password"
+            app:layout_constraintStart_toStartOf="@+id/confirm_password"
+            app:layout_constraintTop_toTopOf="@+id/confirm_password" />
 
 
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/loginbtn_background"
-        android:backgroundTint="@color/surface_primary"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textColor="@color/text_white"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password" />
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/loginbtn_background"
+            android:backgroundTint="@color/surface_primary"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/text_white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_password" />
 
-    <TextView
-        android:id="@+id/sign_in_link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Already have an account? Sign in"
-        android:textColor="#FFAFAFAF"
-        android:fontFamily="@font/montserrat_regular"
+        <TextView
+            android:id="@+id/sign_in_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Already have an account? Sign in"
+            android:textColor="#FFAFAFAF"
 
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_button" />
 
-    <CheckBox
-        android:id="@+id/remember_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="32dp"
-        android:buttonTint="@color/border_grey"
-        android:text="Remember me"
-        android:textColor="@color/border_grey"
-        android:textSize="14dp"
-        android:fontFamily="@font/montserrat_regular"
+        <CheckBox
+            android:id="@+id/remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="32dp"
+            android:buttonTint="@color/border_grey"
+            android:text="Remember me"
+            android:textColor="@color/border_grey"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_regular"
 
-        app:layout_constraintBottom_toTopOf="@+id/register_button"
-        app:layout_constraintStart_toStartOf="@+id/myBarrier"
-        app:layout_constraintTop_toTopOf="@+id/confirm_password"
-        app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintBottom_toTopOf="@+id/register_button"
+            app:layout_constraintStart_toStartOf="@+id/myBarrier"
+            app:layout_constraintTop_toTopOf="@+id/confirm_password"
+            app:layout_constraintVertical_bias="1.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

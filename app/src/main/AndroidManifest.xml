@@ -20,9 +20,6 @@
             android:name=".activity.BookingActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.CheckoutActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.ServiceActivity"
             android:exported="false" />
         <activity
@@ -50,6 +47,7 @@
         <activity android:name=".activity.PaymentCardsActivity" />
         <activity android:name=".activity.HistoryTabActivity" />
         <activity android:name=".activity.BookingDetailsActivity" />
+        <activity android:name=".activity.CheckoutActivity" />
     </application>
 
 </manifest>
