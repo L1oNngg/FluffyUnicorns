@@ -2,6 +2,7 @@ package com.example.fluffyunicorns.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -25,6 +26,20 @@ class CheckoutActivity : AppCompatActivity() {
 
         backIcon.setOnClickListener {
             val intent = Intent(this, ServiceActivity::class.java)
+            startActivity(intent)
+        }
+
+        val SettingButton: ImageButton = findViewById(R.id.SettingButton)
+
+        SettingButton.setOnClickListener {
+            val intent = Intent(this, PaymentMethodsCheckoutActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnNext: Button = findViewById(R.id.btnNext)
+
+        btnNext.setOnClickListener {
+            val intent = Intent(this, SuccessfulActivity::class.java)
             startActivity(intent)
         }
     }

@@ -48,6 +48,7 @@
         <activity android:name=".activity.HistoryTabActivity" />
         <activity android:name=".activity.BookingDetailsActivity" />
         <activity android:name=".activity.CheckoutActivity" />
+        <activity android:name=".activity.PaymentMethodsCheckoutActivity" />
     </application>
 
 </manifest>
