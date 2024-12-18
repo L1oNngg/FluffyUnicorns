@@ -10,7 +10,7 @@ class RoomAdapter(private var rooms: List<Room>) :
 
     class RoomViewHolder(view: android.view.View) : RecyclerView.ViewHolder(view) {
         val roomName: TextView = view.findViewById(R.id.tvRoomName)
-        val roomPrice: TextView = view.findViewById(R.id.tvRoomPrice)
+        val roomPrice: TextView = view.findViewById(R.id.tvDate)
         val roomCapacity: TextView = view.findViewById(R.id.tvRoomCapacity)
     }
 
