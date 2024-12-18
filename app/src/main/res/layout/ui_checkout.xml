@@ -61,8 +61,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BookingBox"
         android:layout_width="351dp"
-        android:layout_height="190dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/frame_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +72,7 @@
             android:id="@+id/BookingTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:text="Your Booking"
@@ -84,11 +85,12 @@
             android:id="@+id/CheckInTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/text_grey"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:text="Check-in"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BookingTitle" />
 
@@ -96,11 +98,12 @@
             android:id="@+id/CheckOutTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/text_grey"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:text="Check-out"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CheckInTitle" />
 
@@ -109,10 +112,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/text_grey"
             android:layout_marginTop="10dp"
             android:text="Guest"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CheckOutTitle" />
 
@@ -122,9 +126,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/text_grey"
             android:text="Room Type"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/GuestTitle" />
 
@@ -134,9 +139,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
             android:text="12/12/2024"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,9 +152,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
             android:text="14/12/2024"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/check_in_date" />
 
@@ -158,9 +165,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
             android:text="4"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/check_out_date" />
 
@@ -170,9 +178,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:text="Double superior king bed"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Twin Room"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Occupacity" />
 
@@ -181,111 +190,292 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/PriceDetailsBox"
         android:layout_width="351dp"
-        android:layout_height="255dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/frame_box"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BookingBox">
 
         <TextView
+            android:id="@+id/roomTypeName8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$50"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomTypeName10" />
+
+        <TextView
+            android:id="@+id/roomTypeName10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$20"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomTypeName2" />
+
+        <TextView
             android:id="@+id/PriceDetailTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Price Details"
             android:textColor="@color/text_black"
             android:textSize="18sp"
-            tools:layout_editor_absoluteX="157dp"
-            tools:layout_editor_absoluteY="32dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/TotalNightTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="Total Night"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="33dp"
-            tools:layout_editor_absoluteY="150dp" />
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PriceDetailTitle" />
 
         <TextView
             android:id="@+id/PricePerNightTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="Price Per Night"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="204dp"
-            tools:layout_editor_absoluteY="150dp" />
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TotalNightTitle" />
 
         <TextView
             android:id="@+id/ServicePart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="Service"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="169dp" />
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PricePerNightTitle" />
 
         <TextView
             android:id="@+id/LaundryTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="Laundry"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="233dp"
-            tools:layout_editor_absoluteY="80dp" />
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ServicePart" />
 
         <TextView
             android:id="@+id/SpaTreatmentTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="Spa Treatment"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="146dp"
-            tools:layout_editor_absoluteY="99dp" />
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LaundryTitle" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="46dp"
-            tools:layout_editor_absoluteY="51dp" />
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Airport shuttle"
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SpaTreatmentTitle" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Total Price"
+            android:textColor="@color/text_grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/roomTypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="4"
             android:textColor="@color/text_black"
-            android:textSize="18sp"
-            tools:layout_editor_absoluteX="33dp"
-            tools:layout_editor_absoluteY="99dp" />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/roomTypeName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$1000"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomTypeName" />
+
+        <TextView
+            android:id="@+id/roomTypeName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$4100"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomTypeName7" />
+
+        <TextView
+            android:id="@+id/roomTypeName7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$30"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomTypeName8" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btnNext"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:background="@drawable/registerbtn_background"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/loginbtn_background"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:paddingLeft="59dp"
         android:paddingTop="5dp"
         android:paddingRight="59dp"
         android:paddingBottom="5dp"
-        android:text="Back"
+        android:text="Confirm"
         android:textAllCaps="false"
-        android:textColor="@color/text_black"
+        android:textColor="@color/text_white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="735dp" />
+        app:layout_constraintTop_toBottomOf="@+id/PaymentBox" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/PaymentBox"
+        android:layout_width="351dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/frame_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceDetailsBox">
+
+        <TextView
+            android:id="@+id/PaymentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Payment method"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="330dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/frame_box"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PaymentTitle">
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/VisaIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/visa" />
+
+            <!-- TextView -->
+
+            <TextView
+                android:id="@+id/SettingText"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="5156 32** **** 6598"
+                android:textColor="#FF1A1A1A"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/SettingButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_right_arrow" />
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
