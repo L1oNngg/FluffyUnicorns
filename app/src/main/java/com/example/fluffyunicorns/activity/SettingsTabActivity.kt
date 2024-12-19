@@ -31,7 +31,7 @@ class SettingsTabActivity : AppCompatActivity() {
         val lo: FrameLayout = findViewById(R.id.lo)
 
         lo.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ServiceActivity::class.java)
             startActivity(intent)
         }
 
