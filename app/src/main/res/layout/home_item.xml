@@ -30,11 +30,11 @@
         <TextView
             android:id="@+id/tvDate"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:text="1000"
             android:fontFamily="@font/montserrat_semibold"
+            android:text="1000"
             android:textSize="17dp"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/tvRoomName" />
@@ -44,9 +44,9 @@
             android:layout_width="163dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="left|center_vertical"
             android:includeFontPadding="false"
-            android:fontFamily="@font/montserrat_bold"
             android:lineHeight="24dp"
             android:maxLines="2"
             android:text="Double superior king bed"
@@ -79,7 +79,7 @@
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/imageHotel1"
@@ -89,9 +89,9 @@
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="23dp"
-            android:layout_height="20dp"
+            android:layout_height="24dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/tvDate"
             app:layout_constraintTop_toBottomOf="@+id/tvRoomName"
             app:srcCompat="@drawable/ic_person" />
@@ -99,11 +99,11 @@
         <TextView
             android:id="@+id/tvRoomCapacity"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:layout_marginStart="23dp"
             android:layout_marginTop="8dp"
-            android:text="4"
             android:fontFamily="@font/montserrat_semibold"
+            android:text="4"
             android:textSize="17dp"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toBottomOf="@+id/tvRoomName" />
