@@ -1,8 +1,11 @@
 package com.example.fluffyunicorns.activity
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +15,6 @@ import com.example.fluffyunicorns.R
 class BookingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.ui_booking)
 
         val imageView17 = findViewById<ImageView>(R.id.imageView17)
@@ -37,6 +39,13 @@ class BookingActivity : AppCompatActivity() {
             dialogImageView.setImageResource(imageResource)
 
             dialog.show()
+
+            val bookBtn: Button = findViewById(R.id.bookBtn)
+
+            bookBtn.setOnClickListener {
+                val intent = Intent(this, CustomerInformationActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
