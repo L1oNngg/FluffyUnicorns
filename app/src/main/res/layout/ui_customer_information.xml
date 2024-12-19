@@ -165,6 +165,7 @@
                 android:id="@+id/Guest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/frame_box"
                 android:padding="10dp"
@@ -352,8 +353,25 @@
                         app:layout_constraintStart_toEndOf="@id/gender"
                         app:layout_constraintTop_toBottomOf="@id/textView17" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/gender"
+                        app:srcCompat="@drawable/ic_down_arrow"
+                        tools:layout_editor_absoluteY="45dp" />
 
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/dateOfBirth"
+                        app:srcCompat="@drawable/ic_calendar"
+                        tools:layout_editor_absoluteY="45dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
