@@ -12,7 +12,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="register_button" />
+        app:constraint_referenced_ids="btnNext2" />
+
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/loginbtn_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:paddingLeft="59dp"
+        android:paddingTop="5dp"
+        android:paddingRight="59dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/text_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="850dp" />
 
     <!-- Top Header -->
     <ImageView
@@ -490,6 +511,8 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

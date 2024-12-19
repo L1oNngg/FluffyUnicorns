@@ -12,14 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="btnNext"/>
+        app:constraint_referenced_ids="btnNext2"/>
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/btnNext2"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="60dp"
         android:background="@drawable/loginbtn_background"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
@@ -27,15 +25,17 @@
         android:paddingTop="5dp"
         android:paddingRight="59dp"
         android:paddingBottom="5dp"
-        android:text="Next"
+        android:visibility="invisible"
+        android:text="Confirm"
         android:textAllCaps="false"
         android:textColor="@color/text_white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="850dp" />
+
+
 
     <!-- Top Header -->
     <ImageView
@@ -165,7 +165,6 @@
                 android:id="@+id/Guest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/frame_box"
                 android:padding="10dp"
@@ -294,7 +293,7 @@
                         android:id="@+id/textView16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/montserrat_bold"
                         android:text="Gender"
@@ -309,7 +308,7 @@
                         android:id="@+id/gender"
                         android:layout_width="130dp"
                         android:layout_height="45dp"
-                        android:layout_marginStart="10dp"
+
                         android:layout_marginTop="5dp"
                         android:background="@drawable/frame_box"
                         android:fontFamily="@font/montserrat_semibold"
@@ -377,6 +376,30 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/loginbtn_background"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:paddingLeft="59dp"
+                android:paddingTop="5dp"
+                android:paddingRight="59dp"
+                android:paddingBottom="5dp"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Guest" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
