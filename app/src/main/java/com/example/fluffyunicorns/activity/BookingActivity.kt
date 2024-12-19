@@ -34,6 +34,13 @@ class BookingActivity : AppCompatActivity() {
             val intent = Intent(this, CustomerInformationActivity::class.java)
             startActivity(intent)
         }
+
+        val backIcon: ImageButton = findViewById(R.id.backIcon)
+
+        backIcon.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setOnClickListenerForImage(imageView: ImageView, imageResource: Int) {
