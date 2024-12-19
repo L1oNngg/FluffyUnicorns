@@ -308,6 +308,7 @@
                 android:layout_marginEnd="30dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/room_05"
+                android:background="@drawable/loginbtn_background"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
 
@@ -318,6 +319,7 @@
                 android:layout_marginEnd="30dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/room_06"
+                android:background="@drawable/loginbtn_background"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
 
@@ -328,6 +330,7 @@
                 android:layout_marginEnd="30dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/room_07"
+                android:background="@drawable/loginbtn_background"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
 
@@ -338,6 +341,7 @@
                 android:layout_marginEnd="30dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/room_08"
+                android:background="@drawable/loginbtn_background"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
 
