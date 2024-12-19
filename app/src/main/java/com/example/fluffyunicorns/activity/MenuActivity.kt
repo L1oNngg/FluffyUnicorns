@@ -92,7 +92,16 @@ class MenuActivity : AppCompatActivity() {
         // Set up RecyclerView
         recyclerView = findViewById(R.id.rvRecommendations)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = RoomAdapter(roomList)
+        adapter = RoomAdapter(roomList,
+            onBookClick = { room ->
+                val intent = Intent(this, CustomerInformationActivity::class.java)
+                startActivity(intent)
+            },
+            onViewClick = { room ->
+                val intent = Intent(this, BookingActivity::class.java)
+                startActivity(intent)
+            }
+        )
         recyclerView.adapter = adapter
 
         // Set up search components
