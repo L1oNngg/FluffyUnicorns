@@ -27,6 +27,13 @@ class BookingActivity : AppCompatActivity() {
         setOnClickListenerForImage(imageView18, R.drawable.room_06)
         setOnClickListenerForImage(imageView19, R.drawable.room_07)
         setOnClickListenerForImage(imageView20, R.drawable.room_08)
+
+        val bookBtn: Button = findViewById(R.id.bookBtn)
+
+        bookBtn.setOnClickListener {
+            val intent = Intent(this, CustomerInformationActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setOnClickListenerForImage(imageView: ImageView, imageResource: Int) {
@@ -39,13 +46,6 @@ class BookingActivity : AppCompatActivity() {
             dialogImageView.setImageResource(imageResource)
 
             dialog.show()
-
-            val bookBtn: Button = findViewById(R.id.bookBtn)
-
-            bookBtn.setOnClickListener {
-                val intent = Intent(this, CustomerInformationActivity::class.java)
-                startActivity(intent)
-            }
         }
     }
 }
