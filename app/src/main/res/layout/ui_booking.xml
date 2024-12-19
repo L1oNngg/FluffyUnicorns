@@ -353,6 +353,7 @@
         android:layout_marginEnd="30dp"
         android:background="@drawable/rounded_20px"
         android:padding="10dp"
+        android:alpha="0.9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView10">
