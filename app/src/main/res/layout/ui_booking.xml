@@ -16,8 +16,11 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_outline"
+        android:clipToOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -256,9 +259,9 @@
                 android:layout_height="75dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
                 android:overScrollMode="never"
                 android:scrollbars="none"
-                android:layout_marginEnd="30dp"
                 app:srcCompat="@drawable/amenity_hot_tub"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
@@ -309,6 +312,8 @@
                 android:layout_height="75dp"
                 android:layout_marginEnd="30dp"
                 android:scaleType="fitXY"
+                android:background="@drawable/rounded_outline"
+                android:clipToOutline="true"
                 app:srcCompat="@drawable/room_12"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
