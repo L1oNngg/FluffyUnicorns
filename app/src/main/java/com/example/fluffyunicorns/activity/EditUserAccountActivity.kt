@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.api.AccountAPI
 import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.model.AccountResponse
 import com.example.fluffyunicorns.model.EditAccountRequest
 import com.example.fluffyunicorns.model.EditAccountResponse
 import retrofit2.Call
@@ -35,6 +36,8 @@ class EditUserAccountActivity : AppCompatActivity() {
         phoneEditText = findViewById(R.id.phone)
         idNumberEditText = findViewById(R.id.IDNumber)
 
+        fetchAccountDetails()
+
         // Back button listener
         val backIcon: ImageButton = findViewById(R.id.backIcon)
         backIcon.setOnClickListener {
@@ -52,6 +55,45 @@ class EditUserAccountActivity : AppCompatActivity() {
         val intent = Intent(this, UserAccountActivity::class.java)
         startActivity(intent)
     }
+
+    private fun fetchAccountDetails() {
+        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val customerID = sharedPreferences.getInt("customerID", -1)
+
+        if (customerID == -1) {
+            Toast.makeText(this, "User information not found.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Get an instance of the API service
+        val accountAPI = Account_RetrofitClient.instance.create(AccountAPI::class.java)
+        val call = accountAPI.getAccountDetails(customerID)
+
+        // Make the API call
+        call.enqueue(object : Callback<AccountResponse> {
+            override fun onResponse(call: Call<AccountResponse>, response: Response<AccountResponse>) {
+                if (response.isSuccessful) {
+                    val accountData = response.body()?.data
+                    if (accountData != null) {
+                        // Populate the UI with account details as hints
+                        firstNameEditText.hint = accountData.FirstName ?: "N/A"
+                        lastNameEditText.hint = accountData.LastName ?: "N/A"
+                        emailEditText.hint = accountData.Email ?: "N/A"
+                        idNumberEditText.hint = accountData.IDNumber?.trim() ?: "N/A" // Safely handle null for IDNumber
+                        phoneEditText.hint = accountData.Phone ?: "N/A"
+                    }
+                } else {
+                    Toast.makeText(this@EditUserAccountActivity, "Failed to load user information", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<AccountResponse>, t: Throwable) {
+                Toast.makeText(this@EditUserAccountActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+
 
     private fun updateAccountDetails() {
         // Retrieve customerID from SharedPreferences
