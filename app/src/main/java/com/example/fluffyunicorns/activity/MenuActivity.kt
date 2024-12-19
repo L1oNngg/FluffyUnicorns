@@ -92,7 +92,16 @@ class MenuActivity : AppCompatActivity() {
         // Set up RecyclerView
         recyclerView = findViewById(R.id.rvRecommendations)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = RoomAdapter(roomList)
+        adapter = RoomAdapter(roomList,
+            onBookClick = { room ->
+                val intent = Intent(this, CustomerInformationActivity::class.java)
+                startActivity(intent)
+            },
+            onViewClick = { room ->
+                val intent = Intent(this, BookingActivity::class.java)
+                startActivity(intent)
+            }
+        )
         recyclerView.adapter = adapter
 
         // Set up search components
@@ -104,11 +113,11 @@ class MenuActivity : AppCompatActivity() {
 
         // Search functionality
         btnSearch.setOnClickListener {
-            val query = etSearch.text.toString().trim()
-            if (query.isNotEmpty()) {
+            val query = (adults + children)
+            if (query > 0) {
                 performSearch(query)
             } else {
-                Toast.makeText(this, "Please enter a search query!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter a valid search query!", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -208,12 +217,12 @@ class MenuActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
 
-    private fun performSearch(query: String) {
-        val filteredList = roomList.filter { it.name.contains(query, ignoreCase = true) }
+    private fun performSearch(query: Int) {
+        val filteredList = roomList.filter { it.capacity == query }
         adapter.updateRooms(filteredList)
 
         if (filteredList.isEmpty()) {
-            Toast.makeText(this, "No rooms found for '$query'", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No rooms found for capacity '$query'", Toast.LENGTH_SHORT).show()
         }
     }
 
