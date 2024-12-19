@@ -12,7 +12,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="register_button" />
+        app:constraint_referenced_ids="btnNext"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/loginbtn_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:paddingLeft="59dp"
+        android:paddingTop="5dp"
+        android:paddingRight="59dp"
+        android:paddingBottom="5dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/text_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Top Header -->
     <ImageView
@@ -200,7 +223,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Middle & First name *"
+                    android:text="Middle, First name *"
                     android:textColor="@color/text_black"
                     android:textSize="16dp"
                     android:textStyle="bold"
@@ -331,31 +354,11 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <Button
-                android:id="@+id/btnNext"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="60dp"
-                android:background="@drawable/loginbtn_background"
-                android:fontFamily="@font/montserrat_bold"
-                android:gravity="center"
-                android:paddingLeft="59dp"
-                android:paddingTop="5dp"
-                android:paddingRight="59dp"
-                android:paddingBottom="5dp"
-                android:text="Next"
-                android:textAllCaps="false"
-                android:textColor="@color/text_white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.491"
-                app:layout_constraintStart_toStartOf="parent" />
 
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
