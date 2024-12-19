@@ -20,7 +20,9 @@ import com.example.fluffyunicorns.model.Room
 import com.example.fluffyunicorns.adapter.RoomAdapter
 import com.example.fluffyunicorns.api.AccountAPI
 import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.api.RoomAPI
 import com.example.fluffyunicorns.model.AccountResponse
+import com.example.fluffyunicorns.model.RoomResponse
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import retrofit2.Call
 import retrofit2.Callback
@@ -103,6 +105,9 @@ class MenuActivity : AppCompatActivity() {
             }
         )
         recyclerView.adapter = adapter
+
+        // Fetch room data from API
+        fetchRooms()
 
         // Set up search components
         etSearch = findViewById(R.id.etSearch)
@@ -255,6 +260,38 @@ class MenuActivity : AppCompatActivity() {
         )
         datePickerDialog.show()
     }
+
+    private fun fetchRooms() {
+        val roomAPI = Account_RetrofitClient.instance.create(RoomAPI::class.java)
+        val call = roomAPI.getRoom()
+
+        call.enqueue(object : Callback<RoomResponse> {
+            override fun onResponse(call: Call<RoomResponse>, response: Response<RoomResponse>) {
+                if (response.isSuccessful) {
+                    val roomData = response.body()?.data
+                    if (roomData != null) {
+                        roomList.clear()
+                        // Map RoomData to Room, using only name, price, and capacity
+                        roomList.addAll(roomData.map { roomDataItem ->
+                            Room(
+                                name = (roomDataItem.TypeName + " " + roomDataItem.RoomNumber),    // Use TypeName for room name
+                                price = roomDataItem.BasePrice,  // Use BasePrice for price
+                                capacity = roomDataItem.MaxOccupancy // Use MaxOccupancy for capacity
+                            )
+                        })
+                        adapter.notifyDataSetChanged()
+                    }
+                } else {
+                    Toast.makeText(this@MenuActivity, "Failed to load room data", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<RoomResponse>, t: Throwable) {
+                Toast.makeText(this@MenuActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
 
     private fun fetchAccountDetails(customerID: Int) {
         // Get an instance of the API service
