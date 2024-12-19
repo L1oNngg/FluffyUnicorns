@@ -54,6 +54,8 @@
         app:layout_constraintStart_toStartOf="@id/myBarrier"
         app:layout_constraintTop_toTopOf="@id/headerBackground" />
 
+
+    <!-- Layout -->
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -71,318 +73,265 @@
             android:fillViewport="true"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/contactInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Contact Information"
+                android:textColor="@color/text_black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/BookingBox"
-                android:layout_width="351dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="60dp"
+                android:layout_width="351.11dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/frame_box"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.483"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/CheckInTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Check-in"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/BookingTitle" />
-
-                <TextView
-                    android:id="@+id/CheckOutTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Check-out"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/CheckInTitle" />
-
-                <TextView
-                    android:id="@+id/GuestTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Guest"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/CheckOutTitle" />
-
-                <TextView
-                    android:id="@+id/RoomTypeTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Room Type"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/GuestTitle" />
-
-                <TextView
-                    android:id="@+id/check_in_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="12/12/2024"
-                    android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/check_out_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="14/12/2024"
-                    android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/check_in_date" />
-
-                <TextView
-                    android:id="@+id/Occupacity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="4"
-                    android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/check_out_date" />
-
-                <TextView
-                    android:id="@+id/RoomTypeName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Twin Room"
-                    android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Occupacity" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/PriceDetailsBox"
-                android:layout_width="351dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="32dp"
-                android:background="@drawable/frame_box"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:paddingTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/BookingBox">
+                app:layout_constraintTop_toBottomOf="@+id/contactInfo">
 
                 <TextView
-                    android:id="@+id/roomTypeName8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="$50"
-                    android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName10" />
-
-                <TextView
-                    android:id="@+id/roomTypeName10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="45dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="$20"
-                    android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName2" />
-
-                <TextView
-                    android:id="@+id/PriceDetailTitle"
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Price Details"
+                    android:text="Hoang Anh"
                     android:textColor="@color/text_black"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/TotalNightTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/CheckInTitle"
+                    android:layout_width="274dp"
+                    android:layout_height="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="Total Night"
+                    android:text="(480) 555-0103 - sayhoang@gmail.com"
                     android:textColor="@color/text_grey"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/PriceDetailTitle" />
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/guestInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Guest information"
+                android:textColor="@color/text_black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BookingBox" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/frame_box"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guestInfo">
 
                 <TextView
-                    android:id="@+id/PricePerNightTitle"
+                    android:id="@+id/Guest1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Price Per Night"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/TotalNightTitle" />
-
-                <TextView
-                    android:id="@+id/ServicePart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Service"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/PricePerNightTitle" />
-
-                <TextView
-                    android:id="@+id/LaundryTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Laundry"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ServicePart" />
-
-                <TextView
-                    android:id="@+id/SpaTreatmentTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Spa Treatment"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/LaundryTitle" />
-
-                <TextView
-                    android:id="@+id/maxOccupancy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Airport shuttle"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/SpaTreatmentTitle" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="Total Price"
-                    android:textColor="@color/text_grey"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/maxOccupancy" />
-
-                <TextView
-                    android:id="@+id/roomTypeName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="10dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="4"
+                    android:text="Guest 1"
                     android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/roomTypeName2"
+                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="$1000"
+                    android:text="Last name *"
                     android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName" />
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Guest1"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="331dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/frame_box"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:hint="E.g., NGUYEN"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="#FF343434"
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/roomTypeName3"
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="$4100"
+                    android:text="Middle & First name *"
                     android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName7" />
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/lastName"
+                    android:layout_width="331dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/frame_box"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:hint="E.g., VAN A"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="#FF343434"
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/roomTypeName7"
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="$30"
+                    android:text="Identity Card Number *"
                     android:textColor="@color/text_black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName8" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lastName"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
+                <EditText
+                    android:id="@+id/IDCard"
+                    android:layout_width="331dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/frame_box"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:hint="E.g., 000 11 222222"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="#FF343434"
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IDCard">
+
+                    <!-- Gender TextView -->
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Gender"
+                        android:textColor="@color/text_black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Gender EditText -->
+                    <EditText
+                        android:id="@+id/gender"
+                        android:layout_width="130dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/frame_box"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:hint="Select"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColor="#FF343434"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView16" />
+
+                    <!-- Date of Birth TextView -->
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Date of Birth"
+                        android:textColor="@color/text_black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/gender"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Date of Birth EditText -->
+                    <EditText
+                        android:id="@+id/dateOfBirth"
+                        android:layout_width="190dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/frame_box"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:hint="E.g, 17/02/2004"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColor="#FF343434"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toEndOf="@id/gender"
+                        app:layout_constraintTop_toBottomOf="@id/textView17" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
                 android:id="@+id/btnNext"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
@@ -403,111 +352,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PaymentBox" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/PaymentBox"
-                android:layout_width="351dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="32dp"
-                android:background="@drawable/frame_box"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PriceDetailsBox">
-
-                <TextView
-                    android:id="@+id/PaymentTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="Payment method"
-                    android:textColor="@color/text_black"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <FrameLayout
-                    android:id="@+id/frameLayout"
-                    android:layout_width="330dp"
-                    android:layout_height="44dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/frame_box"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/PaymentTitle">
-
-                    <!-- ImageView -->
-                    <ImageView
-                        android:id="@+id/VisaIcon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|center_vertical"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/visa" />
-
-                    <!-- TextView -->
-
-                    <TextView
-                        android:id="@+id/SettingText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="24dp"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_marginStart="60dp"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:gravity="center_vertical"
-                        android:includeFontPadding="false"
-                        android:maxLines="1"
-                        android:singleLine="true"
-                        android:text="5156 32** **** 6598"
-                        android:textColor="#FF1A1A1A"
-                        android:textSize="16sp" />
-
-                    <ImageButton
-                        android:id="@+id/SettingButton"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="right|center_vertical"
-                        android:background="@null"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/ic_right_arrow" />
-                </FrameLayout>
+                app:layout_constraintStart_toStartOf="parent" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/BookingTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Contact information"
-                android:textColor="@color/text_black"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="37dp"
-                tools:layout_editor_absoluteY="1dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:background="@drawable/loginbtn_background"
-        android:backgroundTint="@color/surface_primary"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textColor="@color/text_white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="964dp"
-        android:visibility="invisible"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
