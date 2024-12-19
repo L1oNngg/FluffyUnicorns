@@ -267,6 +267,7 @@
             android:text="Register"
             android:textAllCaps="false"
             android:textColor="@color/text_white"
+            android:fontFamily="@font/montserrat_bold"
             android:textStyle="bold"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
