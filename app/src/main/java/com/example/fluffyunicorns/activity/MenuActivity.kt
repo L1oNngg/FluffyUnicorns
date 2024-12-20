@@ -223,7 +223,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun performSearch(query: Int) {
-        val filteredList = roomList.filter { it.capacity == query }
+        val filteredList = roomList.filter { it.capacity >= query }
         adapter.updateRooms(filteredList)
 
         if (filteredList.isEmpty()) {
