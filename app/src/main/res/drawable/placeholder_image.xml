@@ -1,0 +1,8 @@
+<!-- res/drawable/placeholder_image.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#D3D3D3"
+        android:endColor="#B0B0B0"
+        android:angle="45"/>
+    <corners android:radius="8dp"/>
+</shape>

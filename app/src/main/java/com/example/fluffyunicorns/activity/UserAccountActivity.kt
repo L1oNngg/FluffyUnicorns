@@ -22,6 +22,7 @@ class UserAccountActivity : AppCompatActivity() {
     private lateinit var email: TextView
     private lateinit var idNumber: TextView
     private lateinit var phone: TextView
+    private lateinit var username: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,7 @@ class UserAccountActivity : AppCompatActivity() {
         email = findViewById(R.id.email)
         idNumber = findViewById(R.id.IDNumber)
         phone = findViewById(R.id.phone)
+        username = findViewById(R.id.username)
 
         // Retrieve customerID from SharedPreferences
         val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
@@ -84,6 +86,7 @@ class UserAccountActivity : AppCompatActivity() {
                         email.text = accountData.Email ?: "N/A"
                         idNumber.text = accountData.IDNumber?.trim() ?: "N/A" // Safely handle null for idNumber
                         phone.text = accountData.Phone ?: "N/A"
+                        username.text = accountData.Username
                     }
                 } else {
                     Toast.makeText(this@UserAccountActivity, "Failed to load user information", Toast.LENGTH_SHORT).show()
