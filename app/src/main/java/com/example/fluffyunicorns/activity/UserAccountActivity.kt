@@ -31,7 +31,7 @@ class UserAccountActivity : AppCompatActivity() {
         // Initialize the views by linking them to the UI components
         firstName = findViewById(R.id.Firstname)
         lastName = findViewById(R.id.Lastname)
-        email = findViewById(R.id.email)
+        email = findViewById(R.id.username)
         idNumber = findViewById(R.id.IDNumber)
         phone = findViewById(R.id.phone)
         username = findViewById(R.id.username)

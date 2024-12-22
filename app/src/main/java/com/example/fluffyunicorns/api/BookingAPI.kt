@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface BookingAPI {
-    @GET("booking/history/{customerID}")
-    fun getBookingHistory(@Path("customerID") customerID: Int): Call<BookingResponse>
+    @GET("booking/history/{id}")
+    fun getBookingHistory(@Path("id") customerID: Int): Call<BookingResponse>
 }
