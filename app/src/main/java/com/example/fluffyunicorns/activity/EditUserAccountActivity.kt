@@ -32,7 +32,7 @@ class EditUserAccountActivity : AppCompatActivity() {
         // Initialize UI elements
         firstNameEditText = findViewById(R.id.Firstname)
         lastNameEditText = findViewById(R.id.Lastname)
-        emailEditText = findViewById(R.id.email)
+        emailEditText = findViewById(R.id.username)
         phoneEditText = findViewById(R.id.phone)
         idNumberEditText = findViewById(R.id.IDNumber)
 

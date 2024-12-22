@@ -1,315 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="@drawable/main_background"
     tools:layout_editor_absoluteX="7dp"
     tools:layout_editor_absoluteY="103dp">
 
-    <!-- Top Header -->
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/myBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="start"
-        app:constraint_referenced_ids="btnBack" />
-
-    <ImageView
-        android:id="@+id/headerBackground"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="top|left"
-        android:background="@color/essential_bright"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="314.2dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:gravity="center"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:scaleType="centerInside"
-        android:singleLine="true"
-        android:text="Account"
-        android:textColor="@color/text_black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!-- Profile Picture -->
-
-    <ImageButton
-        android:id="@+id/backIcon"
-        android:layout_width="24dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:background="@color/essential_bright"
-        android:src="@drawable/ic_left_arrow"
-        app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toTopOf="@id/headerBackground" />
-
-    <FrameLayout
-        android:id="@+id/profilePictureContainer"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/avatar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/headerBackground">
-
+        <!-- Top Header -->
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/myBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="btnBack" />
 
         <ImageView
-            android:id="@+id/statusIndicator"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="4dp"
-            android:background="@drawable/green_circle" />
-    </FrameLayout>
+            android:id="@+id/headerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="top|left"
+            android:background="@color/essential_bright"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Edit Profile Button -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="28dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:layout_marginTop="16dp"
-        android:background="@color/surface_primary"
-        android:gravity="center"
-        android:text="Edit Profile"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePictureContainer" />
-
-
-    <!-- First Name -->
-
-    <TextView
-        android:id="@+id/Firstname"
-        android:layout_width="170dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/frame_box"
-        android:fontFamily="@font/montserrat_bold"
-        android:padding="10dp"
-        android:text="Hoang"
-        android:textColor="@color/text_black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/tvFirstnameLabel" />
-
-    <TextView
-        android:id="@+id/tvFirstnameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:layout_marginTop="16dp"
-        android:gravity="left|center_vertical"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:text="First name"
-        android:textColor="@color/text_black"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@id/Firstname"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        <TextView
+            android:layout_width="314.2dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:scaleType="centerInside"
+            android:singleLine="true"
+            android:text="Account"
+            android:textColor="@color/text_black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <!-- Last Name -->
-    <TextView
-        android:id="@+id/tvLastnameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:gravity="left|center_vertical"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:text="Last name"
-        android:textColor="@color/text_black"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@id/Lastname"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        <!-- Profile Picture -->
+
+        <ImageButton
+            android:id="@+id/backIcon"
+            android:layout_width="24dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/essential_bright"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintStart_toStartOf="@id/myBarrier"
+            app:layout_constraintTop_toTopOf="@id/headerBackground" />
+
+        <FrameLayout
+            android:id="@+id/profilePictureContainer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerBackground">
 
 
-    <TextView
-        android:id="@+id/Lastname"
-        android:layout_width="170dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:background="@drawable/frame_box"
-        android:padding="10dp"
-        android:text="Anh"
-        android:textStyle="bold"
-        android:textColor="@color/text_black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/Firstname"
-        app:layout_constraintTop_toBottomOf="@+id/tvLastnameLabel" />
+            <ImageView
+                android:id="@+id/statusIndicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="4dp"
+                android:background="@drawable/green_circle" />
+        </FrameLayout>
 
-    <!-- Email -->
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Email"
-        android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/text_black"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@id/email"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/frame_box"
-        android:padding="10dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="sayhoang@gmail.com"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <!-- Identity Card Number -->
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Identity Card Number"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/IDNumber"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/IDNumber"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/frame_box"
-        android:fontFamily="@font/montserrat_bold"
-        android:padding="10dp"
-        android:text=""
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <!-- Phone -->
-    <TextView
-        android:id="@+id/phoneLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Phone"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/phone"
-        app:layout_constraintTop_toBottomOf="@+id/IDNumber"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/frame_box"
-        android:padding="10dp"
-        android:text="(480) 555-0103"
-        android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
-
-    <!-- Username -->
-    <TextView
-        android:id="@+id/usernameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Username"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/username"
-        app:layout_constraintTop_toBottomOf="@+id/Firstname"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/frame_box"
-        android:padding="10dp"
-        android:text="test"
-        android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/text_black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/myBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/usernameLabel" />
-
-    <!-- Back Button -->
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/registerbtn_background"
-        android:gravity="center"
-        android:paddingLeft="59dp"
-        android:paddingTop="5dp"
-        android:paddingRight="59dp"
-        android:paddingBottom="5dp"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="@color/text_black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="28dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_marginTop="16dp"
+            android:background="@color/surface_primary"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePictureContainer" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- First Name -->
 
+        <TextView
+            android:id="@+id/Firstname"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/frame_box"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="10dp"
+            android:text="Hoang"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstnameLabel" />
+
+        <TextView
+            android:id="@+id/tvFirstnameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="16dp"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="First name"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/Firstname"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+        <!-- Last Name -->
+        <TextView
+            android:id="@+id/tvLastnameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Last name"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/Lastname"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+        <TextView
+            android:id="@+id/Lastname"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/frame_box"
+            android:padding="10dp"
+            android:text="Anh"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/Firstname"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastnameLabel" />
+
+        <!-- Email -->
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Email"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/IDNumber"
+            app:layout_constraintTop_toBottomOf="@+id/IDNumber"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/frame_box"
+            android:padding="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="sayhoang@gmail.com"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <!-- Identity Card Number -->
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Identity Card Number"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/IDNumber"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/IDNumber"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/frame_box"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <!-- Phone -->
+        <TextView
+            android:id="@+id/phoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Phone"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/phone"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/frame_box"
+            android:padding="10dp"
+            android:text="(480) 555-0103"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/usernameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Username"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/username"
+            app:layout_constraintTop_toBottomOf="@+id/Firstname"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/frame_box"
+            android:padding="10dp"
+            android:text="test"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/myBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/usernameLabel" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/registerbtn_background"
+            android:gravity="center"
+            android:paddingLeft="59dp"
+            android:paddingTop="5dp"
+            android:paddingRight="59dp"
+            android:paddingBottom="5dp"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/text_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.737"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
