@@ -19,7 +19,7 @@ import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.model.Room
 import com.example.fluffyunicorns.adapter.RoomAdapter
 import com.example.fluffyunicorns.api.AccountAPI
-import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.api.RoomAPI
 import com.example.fluffyunicorns.model.AccountResponse
 import com.example.fluffyunicorns.model.RoomResponse
@@ -262,7 +262,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun fetchRooms() {
-        val roomAPI = Account_RetrofitClient.instance.create(RoomAPI::class.java)
+        val roomAPI = RetrofitClient.instance.create(RoomAPI::class.java)
         val call = roomAPI.getRoom()
 
         call.enqueue(object : Callback<RoomResponse> {
@@ -295,7 +295,7 @@ class MenuActivity : AppCompatActivity() {
 
     private fun fetchAccountDetails(customerID: Int) {
         // Get an instance of the API service
-        val accountAPI = Account_RetrofitClient.instance.create(AccountAPI::class.java)
+        val accountAPI = RetrofitClient.instance.create(AccountAPI::class.java)
         val call = accountAPI.getAccountDetails(customerID)
 
         // Make the API call

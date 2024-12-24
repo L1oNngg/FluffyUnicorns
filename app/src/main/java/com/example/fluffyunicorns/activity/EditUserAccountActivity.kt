@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.api.AccountAPI
-import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.model.AccountResponse
 import com.example.fluffyunicorns.model.EditAccountRequest
 import com.example.fluffyunicorns.model.EditAccountResponse
@@ -66,7 +66,7 @@ class EditUserAccountActivity : AppCompatActivity() {
         }
 
         // Get an instance of the API service
-        val accountAPI = Account_RetrofitClient.instance.create(AccountAPI::class.java)
+        val accountAPI = RetrofitClient.instance.create(AccountAPI::class.java)
         val call = accountAPI.getAccountDetails(customerID)
 
         // Make the API call
@@ -137,7 +137,7 @@ class EditUserAccountActivity : AppCompatActivity() {
         )
 
         // API call to update account
-        val accountAPI = Account_RetrofitClient.instance.create(AccountAPI::class.java)
+        val accountAPI = RetrofitClient.instance.create(AccountAPI::class.java)
         val call = accountAPI.updateAccountDetails(customerID, editAccountRequest)
 
         call.enqueue(object : Callback<EditAccountResponse> {

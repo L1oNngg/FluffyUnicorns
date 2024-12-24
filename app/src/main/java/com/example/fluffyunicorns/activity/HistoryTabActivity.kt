@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.adapter.BookingHistoryAdapter
-import com.example.fluffyunicorns.api.Booking_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.model.BookingResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,13 +19,14 @@ class HistoryTabActivity : AppCompatActivity() {
     private lateinit var bookingAdapter: BookingHistoryAdapter
     private lateinit var recyclerView: RecyclerView
 
-    // Global customer ID (you mentioned this should be global)
-    val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
-    val customerID = sharedPreferences.getInt("customerID", -1)
+    private var customerID: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ui_history_tab)
+
+        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        customerID = sharedPreferences.getInt("customerID", -1)
 
         val iconHome: ImageView = findViewById(R.id.iconHome)
 
@@ -48,7 +49,7 @@ class HistoryTabActivity : AppCompatActivity() {
     }
 
     private fun fetchBookingHistory() {
-        val bookingApi = Booking_RetrofitClient.createService()
+        val bookingApi = RetrofitClient.createBookingService()
         bookingApi.getBookingHistory(customerID).enqueue(object : Callback<BookingResponse> {
             override fun onResponse(call: Call<BookingResponse>, response: Response<BookingResponse>) {
                 if (response.isSuccessful) {

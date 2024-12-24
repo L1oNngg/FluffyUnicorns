@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.model.RegisterRequest
 import com.example.fluffyunicorns.model.RegisterResponse
 import retrofit2.Call
@@ -101,7 +101,7 @@ class RegisterActivity : AppCompatActivity() {
             Password = password
         )
 
-        val accountAPI = Account_RetrofitClient.createService()
+        val accountAPI = RetrofitClient.createAccountService()
 
         // Send data to the API
         accountAPI.registerUser(registerRequest)

@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
 import com.example.fluffyunicorns.api.AccountAPI
-import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.model.AccountResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,7 +31,7 @@ class UserAccountActivity : AppCompatActivity() {
         // Initialize the views by linking them to the UI components
         firstName = findViewById(R.id.Firstname)
         lastName = findViewById(R.id.Lastname)
-        email = findViewById(R.id.username)
+        email = findViewById(R.id.email)
         idNumber = findViewById(R.id.IDNumber)
         phone = findViewById(R.id.phone)
         username = findViewById(R.id.username)
@@ -71,7 +71,7 @@ class UserAccountActivity : AppCompatActivity() {
 
     private fun fetchAccountDetails(customerID: Int) {
         // Get an instance of the API service
-        val accountAPI = Account_RetrofitClient.instance.create(AccountAPI::class.java)
+        val accountAPI = RetrofitClient.instance.create(AccountAPI::class.java)
         val call = accountAPI.getAccountDetails(customerID)
 
         // Make the API call

@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.api.Account_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.model.LoginRequest
 import com.example.fluffyunicorns.model.LoginResponse
 import retrofit2.Call
@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
             val loginRequest = LoginRequest(username, password)
 
             // Use Retrofit to send a login request to the API
-            val accountAPI = Account_RetrofitClient.createService()
+            val accountAPI = RetrofitClient.createAccountService()
             accountAPI.loginUser(loginRequest)
                 .enqueue(object : Callback<LoginResponse> {
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {

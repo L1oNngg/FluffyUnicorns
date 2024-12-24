@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fluffyunicorns.R
-import com.example.fluffyunicorns.api.Guest_RetrofitClient
+import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.model.GuestRequest
 import com.example.fluffyunicorns.model.GuestResponse
 import retrofit2.Call
@@ -60,7 +60,7 @@ class CustomerInformationActivity : AppCompatActivity() {
             )
 
             // Make API call
-            val apiService = Guest_RetrofitClient.createService()
+            val apiService = RetrofitClient.createGuestService()
             apiService.addGuest(guestRequest).enqueue(object : Callback<GuestResponse> {
                 override fun onResponse(call: Call<GuestResponse>, response: Response<GuestResponse>) {
                     if (response.isSuccessful) {
