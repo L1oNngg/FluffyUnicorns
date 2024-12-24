@@ -254,7 +254,7 @@
                     android:textColor="@color/text_black"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName2" />
+                    app:layout_constraintTop_toBottomOf="@+id/price_per_night" />
 
                 <TextView
                     android:id="@+id/PriceDetailTitle"
@@ -362,7 +362,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/maxOccupancy" />
 
                 <TextView
-                    android:id="@+id/roomTypeName"
+                    android:id="@+id/total_night"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="44dp"
@@ -375,7 +375,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/roomTypeName2"
+                    android:id="@+id/price_per_night"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -385,10 +385,10 @@
                     android:textColor="@color/text_black"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/roomTypeName" />
+                    app:layout_constraintTop_toBottomOf="@+id/total_night" />
 
                 <TextView
-                    android:id="@+id/roomTypeName3"
+                    android:id="@+id/totalPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

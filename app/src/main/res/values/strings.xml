@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FluffyUnicorns</string>
+    <string name="price_format">$%s</string>
+    <string name="total_price_format">Total: $%s</string>
 </resources>
