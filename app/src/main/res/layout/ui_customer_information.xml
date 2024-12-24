@@ -223,7 +223,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Middle, First name *"
+                    android:text="First name *"
                     android:textColor="@color/text_black"
                     android:textSize="16dp"
                     android:textStyle="bold"
@@ -401,6 +401,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Guest" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </ScrollView>
 
