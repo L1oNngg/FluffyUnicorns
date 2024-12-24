@@ -55,7 +55,6 @@ class CustomerInformationActivity : AppCompatActivity() {
                 FirstName = firstName,
                 LastName = lastName,
                 DateOfBirth = dateOfBirth,
-                Gender = gender?: "N/A",
                 IDNumber = idCard
             )
 

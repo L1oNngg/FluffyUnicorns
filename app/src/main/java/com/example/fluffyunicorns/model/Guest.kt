@@ -10,6 +10,5 @@ data class GuestRequest(
     val FirstName: String,
     val LastName: String,
     val DateOfBirth: String,
-    val Gender: String,
     val IDNumber: String
 )
