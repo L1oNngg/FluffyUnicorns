@@ -22,6 +22,7 @@ import com.example.fluffyunicorns.api.AccountAPI
 import com.example.fluffyunicorns.api.RetrofitClient
 import com.example.fluffyunicorns.api.RoomAPI
 import com.example.fluffyunicorns.model.AccountResponse
+import com.example.fluffyunicorns.model.RoomDetails
 import com.example.fluffyunicorns.model.RoomResponse
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import retrofit2.Call
@@ -97,10 +98,12 @@ class MenuActivity : AppCompatActivity() {
         adapter = RoomAdapter(roomList,
             onBookClick = { room ->
                 val intent = Intent(this, CustomerInformationActivity::class.java)
+                intent.putExtra("ROOM_ID", room.id)
                 startActivity(intent)
             },
             onViewClick = { room ->
                 val intent = Intent(this, BookingActivity::class.java)
+                intent.putExtra("ROOM_ID", room.id)
                 startActivity(intent)
             }
         )
@@ -216,9 +219,9 @@ class MenuActivity : AppCompatActivity() {
 
     private fun loadDummyData() {
         roomList.clear()
-        roomList.add(Room("Deluxe Room - King Bed", "120", 2))
-        roomList.add(Room("Family Suite - 2 Beds", "200", 4))
-        roomList.add(Room("Standard Room - Queen Bed", "80", 2))
+        roomList.add(Room(1,"Deluxe Room - King Bed", "120", 2))
+        roomList.add(Room(2,"Family Suite - 2 Beds", "200", 4))
+        roomList.add(Room(3,"Standard Room - Queen Bed", "80", 2))
         adapter.notifyDataSetChanged()
     }
 
@@ -262,23 +265,17 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun fetchRooms() {
-        val roomAPI = RetrofitClient.instance.create(RoomAPI::class.java)
+        val roomAPI = RetrofitClient.createRoomService()
         val call = roomAPI.getRoom()
 
         call.enqueue(object : Callback<RoomResponse> {
             override fun onResponse(call: Call<RoomResponse>, response: Response<RoomResponse>) {
                 if (response.isSuccessful) {
-                    val roomData = response.body()?.data
+                    val roomData = response.body()
                     if (roomData != null) {
                         roomList.clear()
-                        // Map RoomData to Room, using only name, price, and capacity
-                        roomList.addAll(roomData.map { roomDataItem ->
-                            Room(
-                                name = (roomDataItem.TypeName + " " + roomDataItem.RoomNumber),    // Use TypeName for room name
-                                price = roomDataItem.BasePrice,  // Use BasePrice for price
-                                capacity = roomDataItem.MaxOccupancy // Use MaxOccupancy for capacity
-                            )
-                        })
+                        // Map RoomDetails to Room, using only name, price, and capacity
+                        roomList.addAll(roomData.map())
                         adapter.notifyDataSetChanged()
                     }
                 } else {

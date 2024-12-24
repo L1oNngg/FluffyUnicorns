@@ -1,6 +1,8 @@
 package com.example.fluffyunicorns.api
 
 import com.example.fluffyunicorns.model.AccountResponse
+import com.example.fluffyunicorns.model.RoomDetails
+import com.example.fluffyunicorns.model.RoomDetailsResponse
 import com.example.fluffyunicorns.model.RoomResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -10,6 +12,6 @@ interface RoomAPI {
     @GET("room")
     fun getRoom(): Call<RoomResponse>
 
-    @GET("room/{id}")
-    fun getRoomDetails(@Path("id") id: Int): Call<AccountResponse>
+    @GET("room/{roomID}")
+    fun getRoomDetails(@Path("roomID") roomID: Int): Call<RoomDetailsResponse>
 }

@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="imageView10" />
+        app:constraint_referenced_ids="mainImage" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/mainImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -224,7 +224,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView15"
+                android:id="@+id/ivWifi"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginEnd="30dp"
@@ -233,7 +233,7 @@
                 tools:layout_editor_absoluteY="581dp" />
 
             <ImageView
-                android:id="@+id/imageView16"
+                android:id="@+id/ivBathtub"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginEnd="30dp"
@@ -242,7 +242,7 @@
                 tools:layout_editor_absoluteY="581dp" />
 
             <ImageView
-                android:id="@+id/imageView17b"
+                android:id="@+id/ivFridge"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginEnd="30dp"
@@ -251,7 +251,7 @@
                 tools:layout_editor_absoluteY="581dp" />
 
             <ImageView
-                android:id="@+id/imageView17"
+                android:id="@+id/ivHotTub"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginEnd="100dp"
@@ -313,7 +313,7 @@
             android:paddingRight="10dp">
 
             <ImageView
-                android:id="@+id/imageView17a"
+                android:id="@+id/subImage1"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginEnd="30dp"
@@ -324,34 +324,12 @@
                 tools:layout_editor_absoluteY="581dp" />
 
             <ImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/subImage2"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginEnd="30dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/room_06"
-                android:background="@drawable/loginbtn_background"
-                tools:layout_editor_absoluteX="31dp"
-                tools:layout_editor_absoluteY="581dp" />
-
-            <ImageView
-                android:id="@+id/imageView19"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginEnd="30dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/room_07"
-                android:background="@drawable/loginbtn_background"
-                tools:layout_editor_absoluteX="31dp"
-                tools:layout_editor_absoluteY="581dp" />
-
-            <ImageView
-                android:id="@+id/imageView20"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginEnd="30dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/room_08"
                 android:background="@drawable/loginbtn_background"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="581dp" />
@@ -371,9 +349,10 @@
         android:alpha="0.9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView10">
+        app:layout_constraintTop_toTopOf="@+id/mainImage">
 
         <TextView
+            android:id="@+id/roomName"
             android:layout_width="225dp"
             android:layout_height="64dp"
             android:gravity="center_vertical"
@@ -389,6 +368,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/roomPrice"
                 android:layout_width="106dp"
                 android:layout_height="32dp"
                 android:gravity="right|center_vertical"
